@@ -1,0 +1,42 @@
+nav {
+    height: 5rem;
+    width: 100vw;
+    background-color: var(--color-primary);
+    display: grid;
+    place-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+
+.nav__toggle-btn {
+    display: none;
+}
+
+.nav__container {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.logo {
+    width: 7rem;
+}
+
+.nav__links {
+    display: flex;
+    gap: 3.5rem;
+    align-items: center;
+}
+
+.nav__links a {
+    transition: var(--transition);
+}
+
+.nav__links a:hover {
+    color: var(--color-secondary);
+}
