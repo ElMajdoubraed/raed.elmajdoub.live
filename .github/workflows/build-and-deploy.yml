@@ -1,8 +1,8 @@
+---
 name: Build and Deploy portfolio
-on: 
+on:
   push:
-    branches: [main]
-
+    branches: [ master ]
 jobs:
   build-and-deploy:
     name: Build and Deploy
@@ -11,31 +11,36 @@ jobs:
       BUCKET: www.elmajdoub.live
       DIST: build
       REGION: us-east-1
-       
+      DIST_ID: build
+
     steps:
     - name: Checkout
-      uses: actions/checkout@v3
-    
+      uses: actions/checkout@v2
+
     - name: Configure AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        awd-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: ${{ env.REGION }}
-    
+
+    # - uses: actions/setup-node@v2
+    #   with:
+    #     node-version: '14'
+
     - name: Install Dependencies
-      run : |
+      run: |
         node --version
         npm ci --production
 
-    - name: Build Static website
+    - name: Build Static Website
       run: npm run prod
 
-    - name: Copy files to the production website with AWS CLI
+    - name: Copy files to the production website with the AWS CLI
       run: |
-        aws s3 sync --delete ${{ env.DIST }} s3://{{ env.BUCKET }}
+        aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
 
-    - name: Copy files to the production website with AWS CLI
+    - name: Copy files to the production website with the AWS CLI
       run: |
         aws cloudfront create-invalidation \
           --distribution-id ${{ env.DIST_ID }} \
