@@ -11,7 +11,7 @@ jobs:
       BUCKET: www.elmajdoub.live
       DIST: build
       REGION: us-east-1
-      DIST_ID: build
+      DIST_ID: E2C1JYDWOHFIA1
 
     steps:
     - name: Checkout
