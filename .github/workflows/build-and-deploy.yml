@@ -31,11 +31,13 @@ jobs:
     - name: Install Dependencies
       run: |
         node --version
-        npm install --save-dev typescript @types/react @types/node
         npm ci --production
 
     - name: Build Static Website
-      run: npm run prod
+      run: |
+        npm install
+        npm install --save-dev typescript @types/react @types/node
+        npm run prod
 
     - name: Copy files to the production website with the AWS CLI
       run: |
