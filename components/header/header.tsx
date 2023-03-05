@@ -8,6 +8,8 @@ export default function Header() {
             <div className="header__logo">
                     <h5>Hello I'm</h5>
                     <h1>Raed Elmajdoub</h1>
+                    <h1 className="hidden">Raed elmajdoub portfolio</h1>
+                    <h1 className="hidden">ElMajdoub.live</h1>
                     <h5 className="text-light">Fullstack Developer</h5>
                 <CTA/>
                 <HeaderSocials/>

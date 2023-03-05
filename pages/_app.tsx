@@ -1,3 +1,4 @@
+import SEO from '@bradgarropy/next-seo'
 import '@/styles/globals.css'
 import '@/components/navbar/navbar.css'
 import '@/components/header/header.css'
@@ -10,5 +11,26 @@ import '@/components/contact/contact.css'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />
+  return <>
+          <SEO
+            title="Raed Elmajdoub Portfolio - elmajdoub.live"
+            description="Raed elmajdoub portfolio - elmajdoub.live"
+            keywords={["raed elmajdoub", "elmajdoub", "portfolio", "raed", "elmajdoub.live"]}
+            icon="/favicon.ico"
+            themeColor="#000000"
+            colorScheme="light"
+            facebook={{
+                image: "/facebook.png",
+                url: "raed elmajdoub",
+                type: "website",
+            }}
+            twitter={{
+                image: "/twitter.png",
+                site: "raed elmajdoub",
+                card: "summary",
+            }}
+        />
+
+        <Component {...pageProps} />
+  </>
 }
