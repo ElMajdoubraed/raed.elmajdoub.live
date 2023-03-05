@@ -1,7 +1,6 @@
-import './contact.css'
-export default function About() {
+export default function Contact() {
   return (
-    <>
-    </>
+    <section id="contact">
+    </section>
   )
 }
