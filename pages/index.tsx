@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from 'next/font/google'
 import Home from '@/components/home/home'
 import Navbar from '@/components/navbar/navbar'
+import Header from '@/components/header/header'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -21,10 +22,11 @@ export default function Index() {
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
       </Head>
-      <main>
-        <Navbar></Navbar>
-        <Home></Home>
-      </main>
+      <>
+        <Header/>
+        <Navbar/>
+        <Home/>
+      </>
     </>
   )
 }

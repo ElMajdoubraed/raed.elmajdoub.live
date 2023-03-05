@@ -1,37 +1,47 @@
-import Link from "next/link"
-import { GoThreeBars } from 'react-icons/go'
+import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
+import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
+import { RiServiceLine } from "react-icons/ri";
+import { useState } from "react";
 export default function Navbar() {
+    const [active, setActive] = useState('#home');
     return (
-      <nav>
-        <div className="container nav__container">
-            <Link href='#home' className="logo">
-                <img src={""} alt="Raed elmajdoub logo"></img>
-            </Link>
-            <ul className="nav__links">
-                <li>
-                    <Link href='#home'>Home</Link>
-                </li>
-                <li>
-                    <Link href='#home'>Home</Link>
-                </li>
-                <li>
-                    <Link href='#home'>Home</Link>
-                </li>
-                <li>
-                    <Link href='#home'>Home</Link>
-                </li>
-                <li>
-                    <Link href='#home'>Home</Link>
-                </li>
-                <li>
-                    <Link href='#home'>Home</Link>
-                </li>
-            </ul>
-            <button className="nav__toggle-btn">
-                <GoThreeBars/>
-            </button>
-        </div>
-      </nav>
+     <nav id="nav">
+        <a 
+            onClick={()=> setActive('#home')}
+            className={ active === '#home' ? 'active' : ''} 
+            href="#home"
+        >
+            <AiOutlineHome/>
+        </a>
+        <a 
+            onClick={()=> setActive('#about')}
+            className={ active === '#about' ? 'active' : ''} 
+            href="#about"
+        >
+            <AiOutlineUser/>
+        </a>
+        <a 
+            onClick={()=> setActive('#experience')}
+            className={ active === '#experience' ? 'active' : ''} 
+            href="#experience"
+        >
+            <BiBook/>
+        </a>
+        <a 
+            onClick={()=> setActive('#services')}
+            className={ active === '#services' ? 'active' : ''} 
+            href="#services"
+        >
+            <RiServiceLine/>
+        </a>
+        <a 
+            onClick={()=> setActive('#contact')}
+            className={ active === '#contact' ? 'active' : ''} 
+            href="#contact"
+        >
+            <BiMessageSquareDetail/>
+        </a>
+     </nav>
     )
   }
   
