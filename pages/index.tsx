@@ -5,6 +5,7 @@ import Header from '@/components/header/header'
 import About from '@/components/about/about'
 import Experience from '@/components/experience/experience'
 import Services from '@/components/services/services'
+import Portfolio from '@/components/portfolio/portfolio'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -30,6 +31,7 @@ export default function Index() {
         <About/>
         <Experience/>
         <Services/>
+        <Portfolio/>
       </>
     </>
   )
