@@ -3,13 +3,13 @@ import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
 import { useState } from "react";
 export default function Navbar() {
-    const [active, setActive] = useState('#home');
+    const [active, setActive] = useState('#header');
     return (
      <nav id="nav">
         <a 
-            onClick={()=> setActive('#home')}
-            className={ active === '#home' ? 'active' : ''} 
-            href="#home"
+            onClick={()=> setActive('#header')}
+            className={ active === '#header' ? 'active' : ''} 
+            href="#header"
         >
             <AiOutlineHome/>
         </a>
