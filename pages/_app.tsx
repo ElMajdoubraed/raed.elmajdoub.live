@@ -5,6 +5,7 @@ import '@/components/about/about.css'
 import '@/components/experience/experience.css'
 import '@/components/services/services.css'
 import '@/components/portfolio/portfolio.css'
+import '@/components/testimonials/testimonials.css'
 import type { AppProps } from 'next/app'
 
 export default function App({ Component, pageProps }: AppProps) {
