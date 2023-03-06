@@ -1,8 +1,15 @@
 const serverless = require("serverless-http");
 const express = require("express");
-const DaynamoSDK = require('./aws/dynamo.sdk')
-const LocalMail = require('./services/mailer.service')
+const DaynamoSDK = require('./aws/dynamo.sdk');
+const LocalMail = require('./services/mailer.service');
+var bodyParser = require('body-parser');
 const app = express();
+
+// parse application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: false }))
+// parse application/json
+app.use(bodyParser.json())
+
 
 app.get("/", (req, res, next) => {
   return res.status(200).json({
@@ -11,6 +18,7 @@ app.get("/", (req, res, next) => {
 });
 
 app.post("/send", async (req, res, next) => {
+  console.log(req.body);
   const { username, email, message, attemps } = req.body;
   const result = await DaynamoSDK.saveIntoDynamoDB({ username, email, message, attemps });
   if (result.code === 200) {
