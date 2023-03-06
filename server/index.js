@@ -1,33 +1,7 @@
 const serverless = require("serverless-http");
 const express = require("express");
+const saveIntoDynamoDB = require('./aws/dynamo.sdk')
 const app = express();
-
-const { v4: uuid } = require('uuid');
-const DynamoService = require('./services/dynamo.service');
-
-Save = async (event) => {
-  const { body = {} } = event;
-
-  const { email = '', name = '', message = '' } = JSON.parse(body);
-
-  const order = {
-    v: uuid(),
-    id: uuid(),
-    name,
-    email,
-    message,
-    createdAt: Date.now(),
-  };
-
-  try {
-    const tableName = process.env.protfolioTable;
-    await DynamoService.write(order, tableName);
-    return { message: 'success' };
-  } catch (e) {
-    console.log('error', e);
-    return { message: 'Failed to create into portfolioTable', error: e.message };
-  }
-};
 
 app.get("/", (req, res, next) => {
   return res.status(200).json({
@@ -35,9 +9,12 @@ app.get("/", (req, res, next) => {
   });
 });
 
-app.get("/api", (req, res, next) => {
-  return res.status(200).json({
-    message: "Hello from api!",
+app.post("/send", (req, res, next) => {
+  const { name, email, message, attemps } = req.body;
+  const result = saveIntoDynamoDB({ name, email, message, attemps });
+  return res.status(result.code).json({
+    status: result.status,
+    details: result.details,
   });
 });
 
