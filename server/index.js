@@ -1,7 +1,7 @@
 const serverless = require("serverless-http");
 const express = require("express");
-const saveIntoDynamoDB = require('./aws/dynamo.sdk')
-const sendLocalMail = require('./services/mailer.service')
+const DaynamoSDK = require('./aws/dynamo.sdk')
+const LocalMail = require('./services/mailer.service')
 const app = express();
 
 app.get("/", (req, res, next) => {
@@ -12,8 +12,8 @@ app.get("/", (req, res, next) => {
 
 app.post("/send", (req, res, next) => {
   const { name, email, message, attemps } = req.body;
-  const result = saveIntoDynamoDB({ name, email, message, attemps });
-  sendLocalMail({ name, email, message });
+  const result = DaynamoSDK.saveIntoDynamoDB({ name, email, message, attemps });
+  LocalMail.sendLocalMail({ name, email, message });
   return res.status(result.code).json({
     status: result.status,
     details: result.details,

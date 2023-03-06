@@ -47,3 +47,7 @@ module.exports.saveIntoDynamoDB = async ({name, email, messagereq, attemps}) => 
     }
 };
   
+
+module.exports = {
+    saveIntoDynamoDB,
+};
