@@ -1,7 +1,7 @@
 const { v4: uuid } = require('uuid');
 const DynamoService = require('../services/dynamo.service');
 
-module.exports.saveIntoDynamoDB = async ({name, email, messagereq, attemps}) => {
+const saveIntoDynamoDB = async ({name, email, messagereq, attemps}) => {
     const message = {
         status: '',
         details: '',
