@@ -1,0 +1,48 @@
+service: server
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  region: us-east-1
+  stage: ${opt:stage , 'dev'}
+  apiGateway:
+    shouldStartNameWithService: true
+  iamRoleStatements:
+    - Effect: Allow
+      Action: 
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+      Resource:
+        Fn::GetAtt:
+          - PortfolioTable
+          - Arn
+  environment:
+    portfolioTableName: ${self:custom.portfolioTableName}
+
+custom:
+  portfolioTableName: portfolio-table-${self:provider.stage}
+
+resources:
+ Resources:
+  PortfolioTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      AttributeDefinitions:
+        - AttributeName: v
+          AttributeType: S
+      KeySchema:
+        - AttributeName: v
+          KeyType: HASH
+      ProvisionedThroughput:
+        ReadCapacityUnits: 1
+        WriteCapacityUnits: 1
+      TableName: ${self:custom.portfolioTableName}
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'
