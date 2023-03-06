@@ -18,8 +18,9 @@ app.get("/", (req, res, next) => {
 });
 
 app.post("/send", async (req, res, next) => {
-  console.log(req.body);
-  const { username, email, message, attemps } = req.body;
+  const { username, email, message, attemps = 0 } = req.body;
+  console.log(username, email, message);
+
   const result = await DaynamoSDK.saveIntoDynamoDB({ username, email, message, attemps });
   if (result.code === 200) {
     await LocalMail.sendLocalMail({ username, email, message });
