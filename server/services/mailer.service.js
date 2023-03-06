@@ -32,8 +32,14 @@ const sendLocalMail = async (name, email, message) => {
         transporter.sendMail({
             from: 'raed@elmajdoub.live',
             to: 'raed@elmajdoub.live',
-            subject: `${name} send a email`,
-            html: `${email} send email via elmajdoub.live ${Date.now()}`,
+            subject: `${name} contact Us Request`,
+            html: `<p>Hello,</p><br>
+                  <p>A user has submitted a contact us request with the following information:</p>
+                  <p>Name: <strong>${name}</strong></p>
+                  <p>Email: <strong>${email}</strong></p>
+                  <p>Message: <strong>${message}</strong></p>
+                  <p>Best regards,</p>
+                  <p>ElMajdoub Raed</p> `
         });
     } catch (e) {   
         throw new Error(`Unable to send email`);
