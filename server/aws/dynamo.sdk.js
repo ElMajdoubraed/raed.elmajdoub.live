@@ -1,7 +1,7 @@
 const { v4: uuid } = require('uuid');
 const DynamoService = require('../services/dynamo.service');
 
-const saveIntoDynamoDB = async ({name, email, messagereq, attemps}) => {
+const saveIntoDynamoDB = async (name, email, messagereq, attemps) => {
     const message = {
         status: '',
         details: '',
@@ -37,7 +37,7 @@ const saveIntoDynamoDB = async ({name, email, messagereq, attemps}) => {
       message.status = 'success'; message.details = 'Successfully created into portfolioTable'; code = 200;  
       return message
     } catch (e) {
-        console.log("====================error : ",e.message)
+      console.log("====================error : ",e.message)
       const message = {
         status: 'failed',
         details: e.message,

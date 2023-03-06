@@ -10,7 +10,7 @@ let transporter = nodemailer.createTransport({
     },
 });
 
-const sendLocalMail = async ({name, email, message}) => {
+const sendLocalMail = async (name, email, message) => {
 
   let info = transporter.sendMail({
         from: 'raed@elmajdoub.live',
