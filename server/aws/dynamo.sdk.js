@@ -32,7 +32,7 @@ const saveIntoDynamoDB = async (name, email, messagereq, attemps) => {
     };
   
     try {
-      const tableName = process.env.protfolioTable;
+      const tableName = process.env.portfolioTableName;
       await DynamoService.write(user, tableName);
       message.status = 'success'; message.details = 'Successfully created into portfolioTable'; code = 200;  
       return message
