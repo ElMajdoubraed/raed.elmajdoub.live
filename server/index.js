@@ -13,7 +13,7 @@ app.use(bodyParser.json())
 
 app.post("/send", async (req, res, next) => {
   const { username, email, message, attemps = 0 } = req.body;
-  if (VerifEmail.isValidEmail__(email) !== 'isValidEmail') {
+  if (VerifEmail.isValidEmail__(email) == 'isNotValidEmail') {
     return res.json({
       code: 400,
       status: 'failed',
