@@ -52,7 +52,7 @@ function checkEmailSMTP(email) {
   }
 }
 
-async function isValidEmail__ (email) {
+const isValidEmail__ = async (email) => {
     const isValid = await checkEmailSMTP(email)
     if(isValid === true) {
         return 'isValidEmail'
