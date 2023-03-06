@@ -31,13 +31,13 @@ Save = async (event) => {
 
 app.get("/", (req, res, next) => {
   return res.status(200).json({
-    message: "Hello from root!",
+    message: "deployed from github actions",
   });
 });
 
-app.get("/path", (req, res, next) => {
+app.get("/api", (req, res, next) => {
   return res.status(200).json({
-    message: "Hello from path!",
+    message: "Hello from api!",
   });
 });
 
