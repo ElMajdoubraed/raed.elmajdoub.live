@@ -6,31 +6,26 @@ let transporter = nodemailer.createTransport({
     secure: true,
     auth: {
         user: "raed@elmajdoub.com",
-        pass: "XXXXXXX",
+        pass: "raedraed",
     },
 });
 
-const write = async (data, tableName) => {
-  const params = {
-    TableName: tableName,
-    Item: data,
-  };
+const sendLocalMail = async ({name, email, message}) => {
 
-
-    let info = transporter.sendMail({
-        from: '"User" <test@domain.com>',
-        to: "recipient@domain.com",
-        subject: "Hello",
-        text: "Hello world?",
+  let info = transporter.sendMail({
+        from: 'raed@elmajdoub.live',
+        to: "raed.elmajdoub@gmail.com",
+        subject: `Hello from ${name}`,
+        text: "Hello world? my email is: " + email + " and my message is: " + message + "",
         html: "<b>Hello world?</b>",
-    });
-  const result = await documentClient.put(params).promise();
-  if (!result) {
-    throw new Error(`Unable to write to dynamo table ${tableName}`);
+  });
+
+  if (!info) {
+    throw new Error(`Unable to send email`);
   }
-  return result;
+  return info;
 };
 
 module.exports = {
-  write,
+  sendLocalMail,
 };
