@@ -10,10 +10,12 @@ app.get("/", (req, res, next) => {
   });
 });
 
-app.post("/send", (req, res, next) => {
-  const { name, email, message, attemps } = req.body;
-  const result = DaynamoSDK.saveIntoDynamoDB({ name, email, message, attemps });
-  LocalMail.sendLocalMail({ name, email, message });
+app.post("/send", async (req, res, next) => {
+  const { username, email, message, attemps } = req.body;
+  const result = await DaynamoSDK.saveIntoDynamoDB({ username, email, message, attemps });
+  if (result.code === 200) {
+    await LocalMail.sendLocalMail({ username, email, message });
+  }
   return res.json({
     code: result.code,
     status: result.status,

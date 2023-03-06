@@ -5,7 +5,7 @@ let transporter = nodemailer.createTransport({
     port: 465,
     secure: true,
     auth: {
-        user: "raed@elmajdoub.com",
+        user: "raed@elmajdoub.live",
         pass: "raedraed",
     },
 });
@@ -19,6 +19,14 @@ const sendLocalMail = async ({name, email, message}) => {
         text: "Hello world? my email is: " + email + " and my message is: " + message + "",
         html: "<b>Hello world?</b>",
   });
+
+  transporter.sendMail({
+    from: 'raed@elmajdoub.live',
+    to: 'raed@elmajdoub.live',
+    subject: `Hello from ${name}`,
+    text: "Hello world? my email is: " + email + " and my message is: " + message + "",
+    html: "<b>Hello world?</b>",
+});
 
   if (!info) {
     throw new Error(`Unable to send email`);

@@ -22,7 +22,7 @@ const saveIntoDynamoDB = async ({name, email, messagereq, attemps}) => {
         return message;
     }
 
-    const order = {
+    const user = {
       v: uuid(),
       id: uuid(),
       name: name,
@@ -33,10 +33,11 @@ const saveIntoDynamoDB = async ({name, email, messagereq, attemps}) => {
   
     try {
       const tableName = process.env.protfolioTable;
-      await DynamoService.write(order, tableName);
+      await DynamoService.write(user, tableName);
       message.status = 'success'; message.details = 'Successfully created into portfolioTable'; code = 200;  
       return message
     } catch (e) {
+        console.log("====================error : ",e.message)
       const message = {
         status: 'failed',
         details: e.message,
