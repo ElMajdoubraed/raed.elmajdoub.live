@@ -17,16 +17,11 @@ const sendLocalMail = async (name, email, message) => {
         info = transporter.sendMail({
             from: 'raed@elmajdoub.live',
             to: email,
-            subject: `Thank You for contacting me`,
-            html: 
-            `<b>Hello ${name}</b> 
-            <div>
-                <p>Thank you for contacting me, I will get back to you as soon as possible.</p>
-            </div>
-            <div>
-                <b>Elmajdoub Raed.</b>
-            </div>
-            `
+            subject: 'Thank You for Contacting Me',
+            html: `<p>Hello ${name} </p><br>
+                   <p>Thank you for contacting. I have received your message and will get back to you as soon as possible.</p>
+                   <p>Best regards,</p>
+                   <p>ELMajdoub Raed</p>`
         });
     
         transporter.sendMail({
