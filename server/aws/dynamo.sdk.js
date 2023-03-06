@@ -1,14 +1,14 @@
 const { v4: uuid } = require('uuid');
 const DynamoService = require('../services/dynamo.service');
 
-module.exports.saveIntoDynamoDB = async ({name, email, message, attemps}) => {
+module.exports.saveIntoDynamoDB = async ({name, email, messagereq, attemps}) => {
     const message = {
         status: '',
         details: '',
         code: 200
     }
 
-    if (!name || !email || !message) {
+    if (!name || !email || !messagereq) {
         message.status = 'failed';
         message.details = 'Missing required parameters';
         message.code = 400;
@@ -27,7 +27,7 @@ module.exports.saveIntoDynamoDB = async ({name, email, message, attemps}) => {
       id: uuid(),
       name: name,
       email: email.trim(),
-      message: message,
+      message: messagereq,
       createdAt: Date.now(),
     };
   
