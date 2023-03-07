@@ -2,7 +2,7 @@
   "name": "raed-elmajdoub-portfolio",
   "version": "0.1.0",
   "private": true,
-  "proxy": "https://api.elmajdoub.live",
+  "proxy": "https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com",
   "scripts": {
     "dev": "next dev",
     "build": "next build",

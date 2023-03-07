@@ -24,7 +24,7 @@ export default function Contact() {
         email: email.current?.value,
         message: message.current?.value
       },
-      url:'https://api.elmajdoub.live/send'
+      url:'https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com/send'
     }).then((response) =>{
       console.log(response.data);})
       

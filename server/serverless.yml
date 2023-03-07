@@ -46,4 +46,3 @@ functions:
     handler: index.handler
     events:
       - httpApi: '*'
-    cors: false
