@@ -1,7 +1,27 @@
 import { BsWhatsapp } from "react-icons/bs"
 import { MdOutlineEmail } from "react-icons/md"
 import { RiMessengerLine } from "react-icons/ri"
+import axios from "axios";
+import { useRef } from "react";
 export default function Contact() {
+  let name = useRef<HTMLInputElement>(null);
+  let email = useRef<HTMLInputElement>(null);
+  let message = useRef<HTMLTextAreaElement>(null);
+  const sendEmail = async (e: any) => {
+    e.preventDefault();
+    await axios({
+      method:"post",
+      data:{
+        username: name.current?.value,
+        email: email.current?.value,
+        message: message.current?.value
+      },
+      url:'https://api.elmajdoub.live/send'
+    }).then((response) =>{
+      console.log(response.data);})
+      
+
+  }
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
@@ -31,10 +51,10 @@ export default function Contact() {
           </article>
         </div>
 
-        <form action="">
-          <input type="text" name="name" id="name" placeholder="Your Full Name" required />
-          <input type="email" name="email" id="email" placeholder="Your email" required />
-          <textarea rows={7} name="message" id="message" placeholder="Your Message" required ></textarea>
+        <form onSubmit={(e: any)=> sendEmail(e)}>
+          <input ref={name} type="text" name="name" id="name" placeholder="Your Full Name" required />
+          <input ref={email} type="email" name="email" id="email" placeholder="Your email" required />
+          <textarea ref={message} rows={7} name="message" id="message" placeholder="Your Message" required ></textarea>
           <button type="submit" className="btn btn-primary w-100">Send Message</button>
         </form>
       </div>
