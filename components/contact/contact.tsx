@@ -11,6 +11,14 @@ export default function Contact() {
     e.preventDefault();
     await axios({
       method:"post",
+      headers: {
+        "Content-Type" : "application/json",
+        "Access-Control-Allow-Headers" : "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+        "Access-Control-Allow-Methods" : "*",
+        "Access-Control-Allow-Credentials" : true,
+        "Access-Control-Allow-Origin" : "*",
+        "X-Requested-With" : "*"
+    },
       data:{
         username: name.current?.value,
         email: email.current?.value,
