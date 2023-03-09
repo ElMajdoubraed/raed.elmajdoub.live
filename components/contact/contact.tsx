@@ -1,62 +1,35 @@
 import { BsWhatsapp } from "react-icons/bs"
 import { MdOutlineEmail } from "react-icons/md"
 import { RiMessengerLine } from "react-icons/ri"
-import axios from "axios";
+import emailjs from "emailjs-com"
 import { useRef } from "react";
+
 export default function Contact() {
+  const form = useRef<any>();
   let name = useRef<HTMLInputElement>(null);
   let email = useRef<HTMLInputElement>(null);
   let message = useRef<HTMLTextAreaElement>(null);
-  const sendEmailDraft = async (e: any) => {
-    e.preventDefault();
-    await axios({
-      method:"post",
-      headers: {
-        "Content-Type" : "application/json",
-        "Access-Control-Allow-Headers" : "*",
-        "Access-Control-Allow-Methods" : "*",
-        "Access-Control-Allow-Credentials" : true,
-        "Access-Control-Allow-Origin" : "*",
-        "X-Requested-With" : "*"
-    },
-      data:{
-        username: name.current?.value,
-        email: email.current?.value,
-        message: message.current?.value
-      },
-      url:'https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com/send'
-    }).then((response) =>{ console.log(response.data);}) 
-  }
-
   const sendEmail = async (e: any) => {
-    e.preventDefault();
-    const log = JSON.stringify({
-      username: name.current?.value,
-      email: email.current?.value,
-      message: message.current?.value
-    })
-
-    console.log("log", log);
-    fetch('https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com/send', {
-      //mode: 'no-cors',
-      method: 'POST',
-      headers: {
-        Accept: 'application/json',
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify({
-        username: name.current?.value,
-        email: email.current?.value,
-        message: message.current?.value
-      })
-    }) 
-    .then((response) => response.json())
-    .then((data) => {
-      console.log("Success:", data);
-    })
-    .catch((error) => {
-      console.error("Error:", error);
-    });
+    const trying: string = await localStorage.getItem('try') || '';
+    const utc = await localStorage.getItem('today');
+    var today = new Date().toJSON().slice(0,10).replace(/-/g,'/');
+    if (trying && trying.length > 3) {
+      if(utc === today) {
+        return alert('You have sent too many messages, please try again later')
+      } else {
+        localStorage.setItem('try', '1')
+        localStorage.setItem('today', today)
+        e.preventDefault();
+        await emailjs.sendForm('service_7yhzpgj', 'template_l7jay78', form.current, 'vJvWFLpjMGXSrVSTO')
+        e.target.reset()
+      }
+    } else {
+      localStorage.setItem('try', trying + 1)
+      localStorage.setItem('today', today)
+      e.preventDefault();
+      await emailjs.sendForm('service_7yhzpgj', 'template_l7jay78', form.current, 'vJvWFLpjMGXSrVSTO')
+      e.target.reset()
+    }
   }
 
   return (
@@ -88,7 +61,7 @@ export default function Contact() {
           </article>
         </div>
 
-        <form onSubmit={(e: any)=> sendEmail(e)}>
+        <form ref={form} onSubmit={(e: any)=> sendEmail(e)}>
           <input ref={name} type="text" name="name" id="name" placeholder="Your Full Name" required />
           <input ref={email} type="email" name="email" id="email" placeholder="Your email" required />
           <textarea ref={message} rows={7} name="message" id="message" placeholder="Your Message" required ></textarea>
