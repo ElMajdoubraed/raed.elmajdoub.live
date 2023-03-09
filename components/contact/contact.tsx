@@ -28,6 +28,7 @@ export default function Contact() {
     }).then((response) =>{ console.log(response.data);}) 
   }
   const sendEmail = async (e: any) => {
+    e.preventDefault();
     fetch('https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com/send', {
       mode: 'no-cors',
       method: 'POST',
