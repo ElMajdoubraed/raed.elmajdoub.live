@@ -41,7 +41,8 @@ export default function Contact() {
         email: email.current?.value,
         message: message.current?.value
       })
-    })
+    }).then((response) =>{ console.log(response);}) 
+      .catch((err) =>{ console.log(err);}) 
   }
 
   return (
