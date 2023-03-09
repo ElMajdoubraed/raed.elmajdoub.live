@@ -20,14 +20,14 @@ export default function Contact() {
         localStorage.setItem('try', '1')
         localStorage.setItem('today', today)
         e.preventDefault();
-        await emailjs.sendForm('service_7yhzpgj', 'template_l7jay78', form.current, 'vJvWFLpjMGXSrVSTO')
+        await emailjs.sendForm('service_7yhzpgj', 'template_ii0byap', form.current, 'vJvWFLpjMGXSrVSTO')
         e.target.reset()
       }
     } else {
       localStorage.setItem('try', trying + 1)
       localStorage.setItem('today', today)
       e.preventDefault();
-      await emailjs.sendForm('service_7yhzpgj', 'template_l7jay78', form.current, 'vJvWFLpjMGXSrVSTO')
+      await emailjs.sendForm('service_7yhzpgj', 'template_ii0byap', form.current, 'vJvWFLpjMGXSrVSTO')
       e.target.reset()
     }
   }

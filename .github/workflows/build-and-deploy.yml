@@ -49,28 +49,28 @@ jobs:
           --distribution-id ${{ env.DIST_ID }} \
           --paths "/*"
 
-  deploy-lambda-server:
-    name: Build and Deploy lambda server
-    runs-on: ubuntu-latest
+  #deploy-lambda-server:
+    #name: Build and Deploy lambda server
+    #runs-on: ubuntu-latest
 
-    env:
-      REGION: us-east-1
+    #env:
+      #REGION: us-east-1
       
-    steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+    #steps:
+    #- name: Checkout
+      #uses: actions/checkout@v2
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ env.REGION }}
+    #- name: Configure AWS Credentials
+      #uses: aws-actions/configure-aws-credentials@v1
+      #with:
+        #aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        #aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        #aws-region: ${{ env.REGION }}
   
-    - name: Install Dependencies
-      run: |
-        cd server
-        node --version
-        npm install
-        npm i -g serverless
-        npm run deploy
+    #- name: Install Dependencies
+      #run: |
+        #cd server
+        #node --version
+        #npm install
+        #npm i -g serverless
+        #npm run deploy
