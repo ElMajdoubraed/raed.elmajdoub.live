@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "deploy": "serverless deploy"
+    "deploy": "serverless deploy",
+    "start": "node index.js"
   },
   "dependencies": {
     "aws-sdk": "^2.1328.0",

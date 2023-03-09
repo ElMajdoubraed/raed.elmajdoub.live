@@ -13,7 +13,7 @@ export default function Contact() {
       method:"post",
       headers: {
         "Content-Type" : "application/json",
-        "Access-Control-Allow-Headers" : "Content-Type,X-Amz-Date,Authorization,X-Api-Key,X-Amz-Security-Token",
+        "Access-Control-Allow-Headers" : "*",
         "Access-Control-Allow-Methods" : "*",
         "Access-Control-Allow-Credentials" : true,
         "Access-Control-Allow-Origin" : "*",
