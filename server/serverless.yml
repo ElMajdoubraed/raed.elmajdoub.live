@@ -46,7 +46,7 @@ functions:
     handler: index.handler
     events:
       - httpApi: '*'
-    Cors:
+    cors:
       AllowOrigin: '*'
       AllowMethods: '*'
       AllowHeaders: '*'
