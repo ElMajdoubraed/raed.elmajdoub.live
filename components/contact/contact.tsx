@@ -7,7 +7,7 @@ export default function Contact() {
   let name = useRef<HTMLInputElement>(null);
   let email = useRef<HTMLInputElement>(null);
   let message = useRef<HTMLTextAreaElement>(null);
-  const sendEmail = async (e: any) => {
+  const sendEmailDraft = async (e: any) => {
     e.preventDefault();
     await axios({
       method:"post",
@@ -25,11 +25,24 @@ export default function Contact() {
         message: message.current?.value
       },
       url:'https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com/send'
-    }).then((response) =>{
-      console.log(response.data);})
-      
-
+    }).then((response) =>{ console.log(response.data);}) 
   }
+  const sendEmail = async (e: any) => {
+    fetch('https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com/send', {
+      mode: 'no-cors',
+      method: 'POST',
+      headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        username: name.current?.value,
+        email: email.current?.value,
+        message: message.current?.value
+      })
+    })
+  }
+
   return (
     <section id="contact">
       <h5>Get In Touch</h5>
