@@ -27,6 +27,7 @@ export default function Contact() {
       url:'https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com/send'
     }).then((response) =>{ console.log(response.data);}) 
   }
+
   const sendEmail = async (e: any) => {
     e.preventDefault();
     const log = JSON.stringify({
@@ -37,7 +38,7 @@ export default function Contact() {
 
     console.log("log", log);
     fetch('https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com/send', {
-      mode: 'no-cors',
+      //mode: 'no-cors',
       method: 'POST',
       headers: {
         Accept: 'application/json',

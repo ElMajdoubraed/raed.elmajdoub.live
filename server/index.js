@@ -20,6 +20,9 @@ app.post("/send", async (req, res, next) => {
     if (result.code === 200) {
       await LocalMail.sendLocalMail(username, email, message );
     }
+    await res.append('Access-Control-Allow-Origin', ['*']);
+    await res.append('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+    await  res.append('Access-Control-Allow-Headers', 'Content-Type');
     return res.json({
       code: result.code,
       status: result.status,
