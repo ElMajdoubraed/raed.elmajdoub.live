@@ -29,6 +29,13 @@ export default function Contact() {
   }
   const sendEmail = async (e: any) => {
     e.preventDefault();
+    const log = JSON.stringify({
+      username: name.current?.value,
+      email: email.current?.value,
+      message: message.current?.value
+    })
+
+    console.log("log", log);
     fetch('https://k9gdbxlpb8.execute-api.us-east-1.amazonaws.com/send', {
       mode: 'no-cors',
       method: 'POST',
@@ -41,8 +48,14 @@ export default function Contact() {
         email: email.current?.value,
         message: message.current?.value
       })
-    }).then((response) =>{ console.log(response);}) 
-      .catch((err) =>{ console.log(err);}) 
+    }) 
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Success:", data);
+    })
+    .catch((error) => {
+      console.error("Error:", error);
+    });
   }
 
   return (
