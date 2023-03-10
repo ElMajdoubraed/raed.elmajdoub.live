@@ -1,5 +1,4 @@
 #experience {
-    height: 100vh;
     padding-top: 7rem;
     overflow: hidden;
 }
@@ -32,9 +31,6 @@
 
 .experience__content {
     padding-left: 5rem;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    row-gap: 2rem;
 }
 
 .experience__details {
@@ -68,6 +64,11 @@
   
 /* ================= MEDIA QUERIES (SMALL DEVICES) ===================== */
 @media screen and (max-width: 600px) {
+
+    .experience__details {
+        display: block;
+        margin-bottom: 1rem;
+    }
 
     .experience__container {
         gap: 1rem;
