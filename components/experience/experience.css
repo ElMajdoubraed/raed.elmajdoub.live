@@ -1,6 +1,12 @@
+#experience {
+    height: 100vh;
+    padding-top: 7rem;
+    overflow: hidden;
+}
+
+
 .experience__container {
     display: grid;
-    grid-template-columns: 1fr 1fr;
     gap: 2rem;
 }
 
@@ -25,6 +31,7 @@
 }
 
 .experience__content {
+    padding-left: 5rem;
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 2rem;
@@ -33,6 +40,7 @@
 .experience__details {
     display: flex;
     gap: 1rem;
+    margin-bottom: 1rem;
 }
 
 .experience__details__icon {
