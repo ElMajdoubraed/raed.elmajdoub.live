@@ -11,7 +11,7 @@ export default function Experience() {
             <h2>My Skills</h2>
 
             <div className="container experience__container">            
-            <Carousel>
+            <>
                 {
                     skillarray.map((skill: any, index: number) => 
                     <div key={'experience_' + index} className="experience__frontend">
@@ -30,7 +30,7 @@ export default function Experience() {
                     </div>
                     )
                 }
-            </Carousel>
+            </>
             </div>
         </section>
     )
