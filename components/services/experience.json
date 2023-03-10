@@ -1,6 +1,87 @@
 [
     {
-        "title": "",
-        "":""
+        "title": "Events project",
+        "description":"L-mobile Intership",
+        "tasks": [
+            "Ui : Ejs",
+            "Responsive design with bootstrap",
+            "Dynamic dashboards with nodeJs and expressJs",
+            "Database : MongoDb",
+            "Authentication using PassportJs, Bcrypt",
+            "Express middlewares",
+            "Other tools : git, github"
+        ]
+    },
+    {
+        "title": "Leadshook",
+        "description":"Leadshook freelance",
+        "tasks": [
+            "Ui : Angular, Ejs",
+            "Design : scss, bootstrap",
+            "Api : nodeJs and expressJs",
+            "JavaScript libraries : Moment.js, Lodash, jQuery",
+            "Charts : chartJs",
+            "Database : Sql (sequelize), Redis",
+            "Issue trackers : Sentry",
+            "Lambda AWS",
+            "Authentication using PassportJs, Jwt, Bcrypt",
+            "Docker, docker-compose",
+            "Web server : Nginx",
+            "Deploy : AWS",
+            "CI/CD : Gitlab CI/CD",
+            "Other tools : Ubuntu, Yaml, git"
+        ]
+    },
+    {
+        "title": "Leadshook V2 using typescript",
+        "description":"Leadshook freelance",
+        "tasks": [
+            "Ui : Angular14",
+            "Design : ngPrime",
+            "Api : NodeJs and Express (TS)",
+            "Swagger",
+            "Jest for testing",
+            "Joi validation",
+            "Database : Sql (sequelize), Redis, MongoDb",
+            "AWS SDK",
+            "Authentication using PassportJs, Jwt, Bcrypt",
+            "Docker, docker-compose",
+            "Web server : Nginx",
+            "Deploy : AWS",
+            "CI/CD : Gitlab CI/CD"
+        ]
+    },
+    {
+        "title": "Afkari",
+        "description":"Freelance Job",
+        "tasks": [
+            "Ui : ReactJs",
+            "Design : BulmaCss",
+            "Api : Firebase (Databse, RealTime, Cloud)",
+            "Database : Firebase database",
+            "Authentication : Firebase Authentication",
+            "Deploy: Firebase Deploy"
+        ]
+    },
+    {
+        "title": "Custom Projects Portal",
+        "description":"Leadshook Intership",
+        "tasks": [
+            "Ui : ReactJs, Mui",
+            "Responsive design with bootstrap",
+            "Api : nodeJs and expressJs",
+            "Charts : AntD",
+            "Database : MongoDb, Redis",
+            "Authentication using PassportJs, Bcrypt, and Recaptcha",
+            "Express middlewares",
+            "Docker, docker-compose",
+            "Web server : Nginx",
+            "Deploy : AWS",
+            "Node Mailer",
+            "CI/CD : Gitlab CI/CD",
+            "Tests: Mocha, Chai",
+            "Socket IO",
+            "Other tools : Ubuntu, Yaml"
+        ]
     }
 ]
