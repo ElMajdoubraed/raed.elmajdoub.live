@@ -39,7 +39,9 @@
             "CloudFront",
             "Route53",
             "PM2",
-            "AWS"
+            "AWS",
+            "Github actions",
+            "Gitlab CI/CD"
         ]
     },
     {
