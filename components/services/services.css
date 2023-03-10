@@ -25,6 +25,12 @@
     box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
 }
 
+.service__description {
+    color: var(--color-bg-variant);
+    text-align: center;
+    font-size: 0.4rem;
+}
+
 .service__head h3 {
     color: var(--color-bg);
     text-align: center;
