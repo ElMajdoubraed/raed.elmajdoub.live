@@ -18,6 +18,7 @@
     "next": "^13.2.3",
     "nodemailer": "^6.9.1",
     "react-icons": "^4.8.0",
+    "react-simple-typewriter": "^5.0.1",
     "swiper": "^9.1.0"
   },
   "devDependencies": {

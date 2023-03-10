@@ -13,8 +13,12 @@ import type { AppProps } from 'next/app'
 export default function App({ Component, pageProps }: AppProps) {
   return <>
           <SEO
-            title="Raed Elmajdoub Portfolio - elmajdoub.live"
-            description="Raed elmajdoub portfolio - elmajdoub.live"
+            title="Raed Elmajdoub | elmajdoub.live"
+            description="As a Full Stack JavaScript/TypeScript and AWS DevOps developer, I specialize in building scalable applications using React, Node.js, and AWS services. With expertise in front-end and back-end development,
+            I deliver seamless user experiences and optimize performance. 
+            My passion for problem-solving and staying up-to-date with industry trends helps me provide the best solutions to my clients.
+            As a freelancer, I have the flexibility to work on projects that align with my skills and interests,
+             while providing top-notch quality work to my clients."
             keywords={["raed elmajdoub", "elmajdoub", "portfolio", "raed", "elmajdoub.live"]}
             icon="/favicon.ico"
             themeColor="#000000"

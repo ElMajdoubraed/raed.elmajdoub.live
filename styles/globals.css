@@ -9,12 +9,12 @@
 }
 
 :root {
-  --color-bg: #1f1f38;
-  --color-bg-variant: #2c2c6c;
-  --color-primary: #4db5ff;
-  --color-primary-variant: rgba(77, 181, 255, 0.4);
+  --color-bg: #010b13;
+  --color-bg-variant: #80800027;
+  --color-primary: #d3af37;
+  --color-primary-variant: #1b1b1b;
   --color-white: #fff;
-  --color-light: rgba(255, 255, 255, 0.6);
+  --color-light: #fadadd;
   
   --transition: all 400ms ease;
 
@@ -33,7 +33,7 @@ html {
 
 body {
   font-family: 'Poppins', sans-serif;
-  background-color: var(--color-bg);
+  background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
   /*background-image: url(../assets/bg-texture.png);*/
@@ -107,7 +107,7 @@ a:hover {
   color: var(--color-bg);
 }
 
-img {
+.image-next {
   display: block;
   width: 100%;
   object-fit: cover;
