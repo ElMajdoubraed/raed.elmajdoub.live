@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 import experiences from "./experience.json"
 import 'swiper/css';
 import 'swiper/css/pagination';
+import { motion } from 'framer-motion'
 export default function Services() {
     const experience_array: any = experiences; 
     const [slideNum, setSlideNum] = useState(1)
@@ -16,7 +17,23 @@ export default function Services() {
 
     })
   return (
-    <section id="services">
+    <motion.section 
+        initial={{
+            x: -200,
+            opacity:0
+        }}
+        whileInView={{
+            x: 0,
+            opacity: 1
+        }}
+        viewport= {{
+            once: true
+        }}
+        transition={{
+            duration: 1.2
+        }}
+        id="services"
+    >
         <h5>Experience i have gained</h5>
         <h2>Experience</h2>
 
@@ -51,6 +68,6 @@ export default function Services() {
         
 
         </Swiper>
-    </section>
+    </motion.section>
   )
 }

@@ -2,6 +2,7 @@ import CTA from "./CTA";
 import HeaderSocials from "./headerSocials"
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import { AiOutlineDownCircle } from 'react-icons/ai'
+import { motion } from 'framer-motion'
 export default function Header() {
     const [text, count] = useTypewriter({
         words: [
@@ -12,8 +13,29 @@ export default function Header() {
         delaySpeed: 1500
     })
     return (
-     <header id="header">
-        <div className="container header__container">
+     <motion.header 
+        initial={{
+            x: -200,
+            opacity:0
+        }}
+        whileInView={{
+            x: 0,
+            opacity: 1
+        }}
+        viewport= {{
+            once: true
+        }}
+        transition={{
+            duration: 1.2
+        }}
+        id="header"
+    >
+        <motion.div 
+            className="container header__container"
+            initial = {{ opacity: 0 }}
+            whileInView = {{ opacity: 1}}
+            transition = {{ duration: 2 }}
+        >
             <div className="header__logo">
                     <h5 className="mt__header">Hello I'm</h5>
                     <h1 className='text-5xl lg:text-6xl font-semibold scroll-px-10'>
@@ -30,8 +52,8 @@ export default function Header() {
                 <a href="#contact" className="scroll__down">
                     <AiOutlineDownCircle/>
                 </a>
-        </div>
-     </header>
+        </motion.div>
+     </motion.header>
     )
   }
   

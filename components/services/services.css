@@ -10,7 +10,7 @@
 
 .swiper-pagination-bullet {
     margin-top: 5rem !important;
-    background: red !important;
+    background: var(--color-primary) !important;
     size: 20rem;
 }
 

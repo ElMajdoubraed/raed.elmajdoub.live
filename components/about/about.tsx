@@ -1,12 +1,25 @@
-//import ME from '../../assets/me-about.jpg'
-import { FaAward } from "react-icons/fa"
-import { FiUsers } from "react-icons/fi"
-import { VscFolderLibrary } from "react-icons/vsc"
 import profile from '../../assets/profile.png'
+import { motion } from 'framer-motion'
 import Image from "next/image"
 export default function About() {
   return (
-    <section id="about">
+    <motion.section 
+      initial={{
+          x: -200,
+          opacity:0
+      }}
+      whileInView={{
+          x: 0,
+          opacity: 1
+      }}
+      viewport= {{
+          once: true
+      }}
+      transition={{
+          duration: 1.2
+      }}
+      id="about"
+    >
       <h5>Get To Know</h5>
       <h2>About Me</h2>
       <h1 className="hidden">Raed elmajdoub</h1>
@@ -18,7 +31,12 @@ export default function About() {
           </div>
         </div>
 
-        <div className="about__content">
+        <motion.div
+            initial = {{ opacity: 0 }}
+            whileInView = {{ opacity: 1}}
+            transition = {{ duration: 2 }}
+            className="about__content"
+        >
           <p>
           As a Full Stack JavaScript/TypeScript and AWS DevOps developer, I specialize in building scalable applications using React, Node.js, and AWS services. With expertise in front-end and back-end development,
           I deliver seamless user experiences and optimize performance. 
@@ -28,8 +46,8 @@ export default function About() {
           </p>
 
           <a href="#contact" className="btn btn-primary">Let's Talk</a>
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   )
 }

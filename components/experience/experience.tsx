@@ -1,16 +1,36 @@
 import { BsPatchCheckFill } from "react-icons/bs";
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import { Carousel } from 'react-responsive-carousel';
 import skills from './skills.json'
+import { motion } from 'framer-motion'
 export default function Experience() {
     const skillarray: any = skills
     return (
-        <section id="experience">
+        <motion.section 
+            initial={{
+                x: -200,
+                opacity:0
+            }}
+            whileInView={{
+                x: 0,
+                opacity: 1
+            }}
+            viewport= {{
+                once: true
+            }}
+            transition={{
+                duration: 1.2
+            }}
+            id="experience"
+        >
             <h5>What skills i have</h5>
             <h2>My Skills</h2>
 
-            <div className="container experience__container">            
-            <>
+            <motion.div 
+                className="container experience__container"
+                initial = {{ opacity: 0 }}
+                whileInView = {{ opacity: 1}}
+                transition = {{ duration: 2 }}
+            >            
                 {
                     skillarray.map((skill: any, index: number) => 
                     <div key={'experience_' + index} className="experience__frontend">
@@ -29,8 +49,7 @@ export default function Experience() {
                     </div>
                     )
                 }
-            </>
-            </div>
-        </section>
+            </motion.div>
+        </motion.section>
     )
 }

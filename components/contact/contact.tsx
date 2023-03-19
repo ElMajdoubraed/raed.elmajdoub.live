@@ -3,6 +3,7 @@ import { MdOutlineEmail } from "react-icons/md"
 import { RiMessengerLine } from "react-icons/ri"
 import emailjs from "emailjs-com"
 import { useRef } from "react";
+import { motion } from 'framer-motion';
 
 export default function Contact() {
   const form = useRef<any>();
@@ -33,11 +34,32 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact">
+    <motion.section 
+      id="contact"
+      initial={{
+        x: -200,
+        opacity:0
+      }}
+      whileInView={{
+        x: 0,
+        opacity: 1
+      }}
+      viewport= {{
+        once: true
+      }}
+      transition={{
+        duration: 1.2
+      }}
+    >
       <h5>Get In Touch</h5>
       <h2>Contact Me</h2>
 
-      <div className="container contact__container">
+      <motion.div 
+        initial = {{ opacity: 0 }}
+        whileInView = {{ opacity: 1}}
+        transition = {{ duration: 2 }}
+        className="container contact__container"
+      >
         <div className="contact__options">
           <article className="contact__option">
             <MdOutlineEmail className="contact__option__icon"/>
@@ -67,7 +89,7 @@ export default function Contact() {
           <textarea ref={message} rows={7} name="message" id="message" placeholder="Your Message" required ></textarea>
           <button type="submit" className="btn btn-primary w-100">Send Message</button>
         </form>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }

@@ -1,6 +1,5 @@
 #experience {
     padding-top: 7rem;
-    overflow: hidden;
 }
 
 
@@ -19,6 +18,8 @@
 }
 
 .experience__container > div:hover {
+    transform: scale(1.1, 1.1) rotate(6deg);
+    transition: var(--transition);
     background: transparent;
     border-color: var(--color-primary-variant);
     cursor: default;
@@ -60,6 +61,10 @@
 
     .experience__content {
         padding: 1rem;
+    }
+
+    .experience__container > div:hover {
+        transform: none;
     }
 }
   

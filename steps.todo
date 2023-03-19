@@ -34,8 +34,10 @@
           "content": "add google tag manager",
           "id": 1679192819162,
           "level": "default",
-          "done": false,
-          "start": 1679192819162
+          "done": true,
+          "start": 1679192819162,
+          "focus": false,
+          "end": 1679194910804
         }
       },
       {
@@ -45,8 +47,10 @@
           "content": "add google analytics",
           "id": 1679192825893,
           "level": "default",
-          "done": false,
-          "start": 1679192825893
+          "done": true,
+          "start": 1679192825893,
+          "focus": false,
+          "end": 1679194906463
         }
       },
       {
@@ -56,8 +60,10 @@
           "content": "add cdn and cloud flare",
           "id": 1679192833062,
           "level": "default",
-          "done": false,
-          "start": 1679192833062
+          "done": true,
+          "start": 1679192833062,
+          "focus": false,
+          "end": 1679194907820
         }
       },
       {
@@ -93,6 +99,6 @@
     "autoSort": false,
     "showEndTime": false,
     "lang": "en",
-    "version": "1679193981030"
+    "version": "1679194910828"
   }
 }
