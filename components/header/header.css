@@ -29,7 +29,9 @@
 
 /* =============== Socials ============== */
 .header__socials {
+    animation: MoveUpDown 5s linear;
     display: flex;
+    transition: var(--transition);
     flex-direction: column;
     align-items: center;
     gap: 0.8rem;
@@ -38,11 +40,24 @@
     bottom: 3rem;
 }
 
+.header__socials:hover {
+    animation: none;
+}
+
 .header__socials::after {
     content: '';
     width: 1;
     height: 2rem;
     background: var(--color-primary);
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 200px;
+    }
 }
 
 .scroll__down {

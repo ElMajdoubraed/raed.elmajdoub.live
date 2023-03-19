@@ -28,7 +28,14 @@ html {
 }
 
 ::-webkit-scrollbar {
-  display: none;
+  display: block;
+  width: 0.6rem;
+  overflow: auto;
+  background-color: var(--color-bg-variant);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-primary);
 }
 
 body {
