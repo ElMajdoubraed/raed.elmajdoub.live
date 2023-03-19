@@ -37,7 +37,7 @@
 
 details > summary::-webkit-details-marker { 
     color: var(--color-primary);
-    margin-top: 2rem;
+    top: 2rem;
 }
 
 .experience__container > details:hover {
