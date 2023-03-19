@@ -34,6 +34,8 @@
     cursor: default;
 }
 
+details > summary::-webkit-details-marker { display: none; }
+
 .experience__container > details:hover {
     background: transparent;
     border-color: var(--color-primary-variant);
