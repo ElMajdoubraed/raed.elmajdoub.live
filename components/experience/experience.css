@@ -19,7 +19,7 @@
 
 .experience__container > details {
     background: var(--color-bg-variant);
-    padding: 0.2rem;
+    padding: 0.1rem;
     border-radius: 1rem;
     border: 1px solid transparent;
     transition: var(--transition);
@@ -27,14 +27,18 @@
 }
 
 .experience__container > div:hover {
-    transform: scale(1.1, 1.1) rotate(6deg);
+    transform: scale(1.1, 1.1) rotate(6deg) translateX(20px);
     transition: var(--transition);
+    z-index: 99s;
     background: transparent;
     border-color: var(--color-primary-variant);
     cursor: default;
 }
 
-details > summary::-webkit-details-marker { display: none; }
+details > summary::-webkit-details-marker { 
+    color: var(--color-primary);
+    margin-top: 2rem;
+}
 
 .experience__container > details:hover {
     background: transparent;

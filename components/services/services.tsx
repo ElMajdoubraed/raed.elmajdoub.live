@@ -56,7 +56,7 @@ export default function Services() {
                         <ul className="service__list">
                         {
                             experience.tasks.map((task: string, i: number) =>
-                            <li>
+                            <li key={'experience_task_key_' + i}>
                                 <BiCheck className="service__list__icon"/>
                                 <p>{task}</p>
                             </li> 
