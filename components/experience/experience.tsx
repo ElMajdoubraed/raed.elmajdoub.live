@@ -63,7 +63,7 @@ export default function Experience() {
                     {
                         skillarray.map((skill: any, index: number) => 
                         <details key={'experience_mobile_' + index} className="experience__frontend">
-                                <summary><h3>{skill.title}</h3></summary>
+                                <summary>{skill.title}</summary>
                                 {
                                     skill.skills.map((e: string, i: number) =>  
                                     <div key={'skill_' + i} className="experience__content">

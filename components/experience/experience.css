@@ -51,7 +51,7 @@ details > summary::-webkit-details-marker {
     color: var(--color-primary);
 }
 
-.experience__container > details h3 {
+.experience__container > details summary {
     cursor: pointer;
     margin-bottom: 2rem;
     color: var(--color-primary);
