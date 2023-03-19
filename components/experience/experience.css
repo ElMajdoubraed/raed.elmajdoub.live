@@ -17,6 +17,15 @@
     transition: var(--transition);
 }
 
+.experience__container > details {
+    background: var(--color-bg-variant);
+    padding: 0.2rem;
+    border-radius: 1rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+    cursor: no-drop;
+}
+
 .experience__container > div:hover {
     transform: scale(1.1, 1.1) rotate(6deg);
     transition: var(--transition);
@@ -25,7 +34,19 @@
     cursor: default;
 }
 
+.experience__container > details:hover {
+    background: transparent;
+    border-color: var(--color-primary-variant);
+}
+
 .experience__container > div h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+    color: var(--color-primary);
+}
+
+.experience__container > details h3 {
+    cursor: pointer;
     text-align: center;
     margin-bottom: 2rem;
     color: var(--color-primary);

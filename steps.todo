@@ -73,8 +73,10 @@
           "content": "add animation",
           "id": 1679192854371,
           "level": "default",
-          "done": false,
-          "start": 1679192854371
+          "done": true,
+          "start": 1679192854371,
+          "focus": false,
+          "end": 1679197289190
         }
       },
       {
@@ -99,6 +101,6 @@
     "autoSort": false,
     "showEndTime": false,
     "lang": "en",
-    "version": "1679194910828"
+    "version": "1679197289229"
   }
 }
