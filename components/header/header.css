@@ -57,6 +57,10 @@
     }
 }
 
+.header__socials__link:hover {
+    transform: scale(1.4, 1.4);
+}
+
 .scroll__down {
     position: absolute;
     right: -2rem;
