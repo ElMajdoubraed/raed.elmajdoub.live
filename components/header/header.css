@@ -29,7 +29,7 @@
 
 /* =============== Socials ============== */
 .header__socials {
-    animation: MoveUpDown 5s linear;
+    animation: MoveUpDown 5s linear 1;
     display: flex;
     transition: var(--transition);
     flex-direction: column;
@@ -40,11 +40,8 @@
     bottom: 3rem;
 }
 
-.header__socials:hover {
-    animation: none;
-}
-
 .header__socials::after {
+    animation: none;
     content: '';
     width: 1;
     height: 2rem;
