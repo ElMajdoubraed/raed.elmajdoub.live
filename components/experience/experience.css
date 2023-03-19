@@ -35,6 +35,10 @@
     cursor: default;
 }
 
+.experience__container > div:hover:nth-child(2n) {
+    transform: scale(1.1, 1.1) rotate(-6deg) translateX(20px);
+}
+
 details > summary::-webkit-details-marker { 
     color: var(--color-primary);
     margin-right: 1.5rem;
