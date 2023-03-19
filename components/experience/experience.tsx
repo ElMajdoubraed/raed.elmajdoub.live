@@ -1,5 +1,5 @@
 import { BsPatchCheckFill } from "react-icons/bs";
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 import skills from './skills.json'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from "react";

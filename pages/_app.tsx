@@ -14,9 +14,9 @@ import Script from 'next/script'
 export default function App({ Component, pageProps }: AppProps) {
   return <>
           <SEO
-            title="Raed Elmajdoub"
+            title="Raed Elmajdoub - FullStack JavaScript/TypeScript"
             description="As a Full Stack JavaScript/TypeScript and AWS DevOps developer, I specialize in building scalable applications using React, Node.js, and AWS services."
-            keywords={["raed elmajdoub", "elmajdoub", "portfolio", "raed", "elmajdoub.live"]}
+            keywords={["raed elmajdoub", "elmajdoub", "portfolio", "raed", "elmajdoub.live", "majdoub", "raed majdoub"]}
             icon="/favicon.ico"
             themeColor="#000000"
             colorScheme="light"

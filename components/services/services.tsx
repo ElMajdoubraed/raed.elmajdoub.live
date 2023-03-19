@@ -50,6 +50,7 @@ export default function Services() {
                 experience_array.map((experience: any, index: number) => 
                     <SwiperSlide key={'experience_key_' + index} className="service">
                         <div className="service__head">
+                            <h3 className="hidden">Raed elmajdoub - {experience.title}</h3>
                             <h3>{experience.title}</h3>
                             <p className="service__description">{experience.description}</p>
                         </div>
@@ -58,6 +59,7 @@ export default function Services() {
                             experience.tasks.map((task: string, i: number) =>
                             <li key={'experience_task_key_' + i}>
                                 <BiCheck className="service__list__icon"/>
+                                <p className="hidden">Raed elmajdoub - {task}</p>
                                 <p>{task}</p>
                             </li> 
                             )
