@@ -20,15 +20,11 @@ export default function Index() {
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet"></link>
-        <meta property="og:site_name" content="موقع بعيد" />
+        <meta property="og:site_name" content="raed elmajdoub" />
         <meta property="og:locale" content="en" />
         <meta property="og:locale:alternate" content="en" />
-        <meta property="og:description" content="As a Full Stack JavaScript/TypeScript and AWS DevOps developer, I specialize in building scalable applications using React, Node.js, and AWS services. With expertise in front-end and back-end development,
-            I deliver seamless user experiences and optimize performance. 
-            My passion for problem-solving and staying up-to-date with industry trends helps me provide the best solutions to my clients.
-            As a freelancer, I have the flexibility to work on projects that align with my skills and interests,
-             while providing top-notch quality work to my clients." />
-        <meta property="og:title" content="Raed Elmajdoub | elmajdoub.live" />
+        <meta property="og:description" content="As a Full Stack JavaScript/TypeScript and AWS DevOps developer, I specialize in building scalable applications using React, Node.js, and AWS services." />
+        <meta property="og:title" content="Raed Elmajdoub" />
         <meta property="og:image:height" content="256" />
         <meta property="og:image:width" content="256" />
         <meta property="og:url" content="https://elmajdoub.live" />

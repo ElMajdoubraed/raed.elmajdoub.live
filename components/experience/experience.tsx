@@ -4,7 +4,6 @@ import { Carousel } from 'react-responsive-carousel';
 import skills from './skills.json'
 export default function Experience() {
     const skillarray: any = skills
-    console.log(skills)
     return (
         <section id="experience">
             <h5>What skills i have</h5>
