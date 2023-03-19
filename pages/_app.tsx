@@ -9,6 +9,7 @@ import '@/components/portfolio/portfolio.css'
 import '@/components/testimonials/testimonials.css'
 import '@/components/contact/contact.css'
 import type { AppProps } from 'next/app'
+import Script from 'next/script'
 
 export default function App({ Component, pageProps }: AppProps) {
   return <>
@@ -30,7 +31,20 @@ export default function App({ Component, pageProps }: AppProps) {
                 card: "summary",
             }}
         />
-
+        <Script src='https://cdnjs.cloudflare.com/ajax/libs/script.js/2.0.2/script.min.js'/>
+        <Script async src="https://www.googletagmanager.com/gtag/js?id=G-1XSLL064K5"/>
+        <Script id='google-analytics' strategy="afterInteractive"
+           dangerouslySetInnerHTML={{
+            __html: `
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-1XSLL064K5', {
+                  page_path: window.location.pathname,
+                });
+              `,
+            }}
+        />
         <Component {...pageProps} />
   </>
 }
