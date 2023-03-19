@@ -1,6 +1,5 @@
 #header {
     height: 100vh;
-    padding-top: 7rem;
     overflow: hidden;
 }
 
@@ -65,7 +64,6 @@
     position: absolute;
     right: -2rem;
     bottom: 5rem;
-    /*transform: rotate(90deg); */
     font-weight: 500;   
     font-size: 1.5rem;
 }
@@ -84,6 +82,7 @@
 @media screen and (max-width: 600px) {
     #header {
         height: 100vh;
+        margin-top: 7rem;
     }
 
     .header__socials,
@@ -93,5 +92,77 @@
 
     .mt__header {
         margin-top: 0;
+    }
+}
+
+.animation__header__loadingscreen {
+    justify-content: center;
+    display: flex;
+    margin-top: 10rem;
+    align-items: center;
+}
+
+.animation__header__loading {
+    text-align: center;
+    width: 160px;
+    display: flex;
+    flex-wrap: wrap;
+    animation: rotate__header 9.5s linear infinite;
+}
+
+.animation__header__loading span {
+    font-size: small;
+    width: 64px;
+    height: 64px;
+    text-align: center;
+    color: var(--color-primary);
+    margin: 6px;
+    animation: scale__header 2s linear infinite;
+    transition: var(--transition);
+    scroll-behavior: smooth;
+}
+
+.animation__header__loading span:nth-child(1) {
+    border-radius: 50% 50% 0 50%;
+    transform-origin: bottom right;
+}
+
+.animation__header__loading span:nth-child(2) {
+    border-radius: 50% 50% 50% 0;
+    transform-origin: bottom left;
+    animation-delay: .5s;
+}
+
+.animation__header__loading span:nth-child(3) {
+    border-radius: 50% 0 50% 50%;
+    transform-origin: top right;
+    animation-delay: 1.5s;
+}
+
+.animation__header__loading span:nth-child(4) {
+    border-radius: 0 50% 50% 50%;
+    transform-origin: top left;
+    animation-delay: 1s;
+}
+
+
+@keyframes scale__header {
+    50% {
+        transform: scale(1.4);
+    }
+    from {
+        color: var(--color-primary);
+    }
+    to {
+        color: var(--color-bg-variant)
+    }
+}
+
+@keyframes rotate__header {
+    0%, 100% {
+        bottom: 0;
+    }
+    50% {
+        bottom: 200px;
     }
 }

@@ -3,6 +3,7 @@ import HeaderSocials from "./headerSocials"
 import { Cursor, useTypewriter } from 'react-simple-typewriter'
 import { AiOutlineDownCircle } from 'react-icons/ai'
 import { motion } from 'framer-motion'
+import Animation from "./Animation";
 export default function Header() {
     const [text, count] = useTypewriter({
         words: [
@@ -47,6 +48,7 @@ export default function Header() {
                     <h1 className="hidden">ElMajdoub.live</h1>
                     <h5 className="text-light">Fullstack JS/TS, DEVOPS</h5>
                 <CTA/>
+                <Animation/>
                 <HeaderSocials/>
 
                 <a href="#contact" className="scroll__down">
