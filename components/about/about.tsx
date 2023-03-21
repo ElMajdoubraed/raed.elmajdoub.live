@@ -1,4 +1,4 @@
-import profile from '../../assets/profile.png'
+import profile from '../../assets/profilebg.png'
 import { motion } from 'framer-motion'
 import Image from "next/image"
 export default function About() {

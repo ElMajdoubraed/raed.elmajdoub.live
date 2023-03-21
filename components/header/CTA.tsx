@@ -1,8 +1,7 @@
-//import CV from '../../assets/cv.pdf'
 const CTA = () => {
     return (
         <div className="cta">
-            <a href='' download aria-disabled={true} className="btn">Download CV</a>
+            <a href='/CV.pdf' download rel="noopener noreferrer" className="btn">Download CV</a>
             <a href="#contact" className="btn btn-primary">Let's talk</a>
         </div>
     )
