@@ -11,6 +11,14 @@ const nextConfig = {
 
     return config
   },
+  async rewrites() {
+      return [
+          {
+              source: '/robots.txt',
+              destination: '/api/robots'
+          }
+      ];
+  }
 }
 
 const withPWA = require("next-pwa");

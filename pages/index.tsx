@@ -15,7 +15,12 @@ export default function Index() {
   return (
     <>
       <Head>
-        <meta name="robots" content="index, follow"/>
+        <meta name="robots" content="noindex,nofollow" />
+        <meta name="robots" content="all" />
+        <meta name="googlebot" content="noindex,nofollow" />
+        <meta name="google" content="nositelinkssearchbox" />
+        <link rel="apple-touch-icon" href="/icon-192x192.png" />
+        <meta name="google" content="notranslate" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
         <link rel="preconnect" href="https://fonts.googleapis.com"/>
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
