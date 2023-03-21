@@ -18,11 +18,38 @@
     text-align: center;
     transition: var(--transition);
     border: 1px solid transparent;
+    cursor: pointer;
 }
 
 .contact__option:hover {
     border-color: var(--color-primary-variant);
     background: transparent;
+    animation: contact__animation__hover 1s linear 1;
+}
+
+@keyframes contact__animation__hover {
+    50% {
+        transform: scale(1.1);
+    }
+    from {
+        transform: rotate(6deg);
+        color: var(--color-primary);
+    }
+    to {
+        transform: rotate(-6deg);
+        color: var(--color-bg-variant)
+    }
+}
+
+@keyframes contact__animation {
+    from {
+        transform: rotate(8deg);
+        color: var(--color-primary);
+    }
+    to {
+        transform: rotate(-8deg);
+        color: var(--color-bg-variant)
+    }
 }
 
 .contact__option__icon {
@@ -52,6 +79,10 @@ input, textarea {
     color: var(--color-white);
 }
 
+input:focus, textarea:focus {
+    transform: scale(1.2);
+}
+
 /* ================= MEDIA QUERIES (MEDIUM DEVICES) ===================== */
 @media screen and (max-width: 1024px) {
     .container.contact__container {
@@ -61,6 +92,10 @@ input, textarea {
 
     #contact {
         margin-bottom: 9rem !important;
+    }
+
+    input:focus, textarea:focus {
+        transform: scale(1.05);
     }
 }
   
@@ -73,8 +108,16 @@ input, textarea {
     #contact {
         margin-bottom: 9rem !important;
     }
+
+    input:focus, textarea:focus {
+        transform: scale(1.05);
+    }
 }
 
 #contact {
-    margin-bottom: 3rem;
+    margin-bottom: 9rem !important;;
+}
+
+.custom__link {
+    color: #fff !important;
 }

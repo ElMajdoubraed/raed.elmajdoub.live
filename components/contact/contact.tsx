@@ -61,21 +61,24 @@ export default function Contact() {
         className="container contact__container"
       >
         <div className="contact__options">
-          <article className="contact__option">
+          <article onClick={()=> {location.href = 'mailto:raed@elmajdoub.live'}} className="contact__option">
             <MdOutlineEmail className="contact__option__icon"/>
             <h4>Email</h4>
             <h5>raed@elmajdoub.live</h5>
             <a href="mailto:raed@elmajdoub.live" target="_blank">Send a message</a>
           </article>
-
-          <article className="contact__option">
+        
+          {
+            /*
+            <article className="contact__option">
             <RiMessengerLine className="contact__option__icon"/>
             <h4>Messenger</h4>
             <h5>Raed elmajdoub</h5>
             <a href="https://m.me/raedelmajdoub" target="_blank">Send a message</a>
-          </article>
-
-          <article className="contact__option">
+            </article>
+            */
+          }
+          <article onClick={()=> {location.href = 'https://wa.me/+21629497446'}} className="contact__option">
             <BsWhatsapp className="contact__option__icon"/>
             <h4>Whatsapp</h4>
             <h5>+216 29.497.446</h5>
