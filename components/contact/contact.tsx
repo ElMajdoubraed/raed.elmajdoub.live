@@ -72,14 +72,14 @@ export default function Contact() {
             <RiMessengerLine className="contact__option__icon"/>
             <h4>Messenger</h4>
             <h5>Raed elmajdoub</h5>
-            <a href="https://m.me/profile" target="_blank">Send a message</a>
+            <a href="https://m.me/raedelmajdoub" target="_blank">Send a message</a>
           </article>
 
           <article className="contact__option">
             <BsWhatsapp className="contact__option__icon"/>
             <h4>Whatsapp</h4>
             <h5>+216 29.497.446</h5>
-            <a href="https://api.whatsapp.com/send?phone=+21629497446" target="_blank">Send a message</a>
+            <a href="https://wa.me/+21629497446" target="_blank">Send a message</a>
           </article>
         </div>
 
