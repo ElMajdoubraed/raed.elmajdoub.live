@@ -31,6 +31,7 @@ export default function App({ Component, pageProps }: AppProps) {
                 card: "summary",
             }}
         />
+        <Script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9791911760978265"/>
         <Script src='https://cdnjs.cloudflare.com/ajax/libs/script.js/2.0.2/script.min.js'/>
         <Script async src="https://www.googletagmanager.com/gtag/js?id=G-1XSLL064K5"/>
         <Script id='google-analytics' strategy="afterInteractive"
