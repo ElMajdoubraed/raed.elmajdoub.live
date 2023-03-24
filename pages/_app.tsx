@@ -13,7 +13,7 @@ import Script from 'next/script'
 import dynamic from 'next/dynamic'
 
 export default function App({ Component, pageProps }: AppProps) {
-  const PwaUpdater = dynamic(() => import(`./PwaUpdater`), { ssr: false });
+  const PwaUpdater = dynamic(() => import('../public/PwaUpdater'), { ssr: false });
   return <>
           <SEO
             title="Raed Elmajdoub - FullStack JavaScript/TypeScript"

@@ -1,4 +1,5 @@
 /** @type {import('next').NextConfig} */
+
 const config = {
   reactStrictMode: true,
   images: {
@@ -22,7 +23,7 @@ const config = {
 }
 
 const withPWA = require("next-pwa");
-import runtimeCaching from 'next-pwa/cache.js';
+const runtimeCaching = require('next-pwa/cache.js');
 
 const nextConfig = withPWA({
   dest: 'public',
