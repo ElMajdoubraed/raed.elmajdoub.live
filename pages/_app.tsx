@@ -10,8 +10,10 @@ import '@/components/testimonials/testimonials.css'
 import '@/components/contact/contact.css'
 import type { AppProps } from 'next/app'
 import Script from 'next/script'
+import dynamic from 'next/dynamic'
 
 export default function App({ Component, pageProps }: AppProps) {
+  const PwaUpdater = dynamic(() => import(`./PwaUpdater`), { ssr: false });
   return <>
           <SEO
             title="Raed Elmajdoub - FullStack JavaScript/TypeScript"
@@ -46,6 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
               `,
             }}
         />
+      
         <Component {...pageProps} />
   </>
 }
