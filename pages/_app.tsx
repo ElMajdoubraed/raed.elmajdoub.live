@@ -48,7 +48,11 @@ export default function App({ Component, pageProps }: AppProps) {
               `,
             }}
         />
-        <PwaUpdater/>
+        {
+          /* 
+          <PwaUpdater/>
+          */
+        }
         <Component {...pageProps} />
   </>
 }
