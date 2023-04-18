@@ -23,7 +23,7 @@ export default function Contact() {
         e.preventDefault();
         await emailjs.sendForm
         ( 
-          process.env.MAIL_SERVICE,
+          process.env.MAIL_SERVICE || "service_7yhzpgj",
           process.env.MAIL_TEMPLATE || "template_ii0byap",
           form.current,
           process.env.MAIL_SECRET
@@ -36,7 +36,7 @@ export default function Contact() {
       e.preventDefault();
       await emailjs.sendForm
       ( 
-          process.env.MAIL_SERVICE,
+          process.env.MAIL_SERVICE || "service_7yhzpgj",
           process.env.MAIL_TEMPLATE || "template_ii0byap",
           form.current,
           process.env.MAIL_SECRET
