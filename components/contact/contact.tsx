@@ -26,7 +26,7 @@ export default function Contact() {
           process.env.MAIL_SERVICE || "service_7yhzpgj",
           process.env.MAIL_TEMPLATE || "template_ii0byap",
           form.current,
-          process.env.MAIL_SECRET
+          process.env.MAIL_SECRET || "vJvWFLpjMGXSrVSTO"
         )
         e.target.reset()
       }
@@ -39,7 +39,7 @@ export default function Contact() {
           process.env.MAIL_SERVICE || "service_7yhzpgj",
           process.env.MAIL_TEMPLATE || "template_ii0byap",
           form.current,
-          process.env.MAIL_SECRET
+          process.env.MAIL_SECRET || "vJvWFLpjMGXSrVSTO"
       )
       e.target.reset()
     }
