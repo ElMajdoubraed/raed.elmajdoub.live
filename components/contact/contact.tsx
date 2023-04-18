@@ -23,23 +23,23 @@ export default function Contact() {
         e.preventDefault();
         await emailjs.sendForm
         ( 
-          process.env.MAIL_SERVICE || "service_7yhzpgj",
+          process.env.MAIL_SERVICE,
           process.env.MAIL_TEMPLATE || "template_ii0byap",
           form.current,
-          process.env.MAIL_SECRET || "vJvWFLpjMGXSrVSTO"
+          process.env.MAIL_SECRET
         )
         e.target.reset()
-      }
+      }|| "service_7yhzpgj"
     } else {
       localStorage.setItem('try', trying + 1)
       localStorage.setItem('today', today)
       e.preventDefault();
       await emailjs.sendForm
       ( 
-          process.env.MAIL_SERVICE || "service_7yhzpgj",
+          process.env.MAIL_SERVICE,
           process.env.MAIL_TEMPLATE || "template_ii0byap",
           form.current,
-          process.env.MAIL_SECRET || "vJvWFLpjMGXSrVSTO"
+          process.env.MAIL_SECRET
       )
       e.target.reset()
     }
