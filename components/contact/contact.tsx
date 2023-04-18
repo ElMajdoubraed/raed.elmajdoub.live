@@ -21,14 +21,26 @@ export default function Contact() {
         localStorage.setItem('try', '1')
         localStorage.setItem('today', today)
         e.preventDefault();
-        await emailjs.sendForm('service_7yhzpgj', 'template_ii0byap', form.current, 'vJvWFLpjMGXSrVSTO')
+        await emailjs.sendForm
+        ( 
+          process.env.MAIL_SERVICE || "service_7yhzpgj",
+          process.env.MAIL_TEMPLATE || "template_ii0byap",
+          form.current,
+          process.env.MAIL_SECRET
+        )
         e.target.reset()
       }
     } else {
       localStorage.setItem('try', trying + 1)
       localStorage.setItem('today', today)
       e.preventDefault();
-      await emailjs.sendForm('service_7yhzpgj', 'template_ii0byap', form.current, 'vJvWFLpjMGXSrVSTO')
+      await emailjs.sendForm
+      ( 
+          process.env.MAIL_SERVICE || "service_7yhzpgj",
+          process.env.MAIL_TEMPLATE || "template_ii0byap",
+          form.current,
+          process.env.MAIL_SECRET
+      )
       e.target.reset()
     }
   }
