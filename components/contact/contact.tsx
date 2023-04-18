@@ -29,7 +29,7 @@ export default function Contact() {
           process.env.MAIL_SECRET
         )
         e.target.reset()
-      }|| "service_7yhzpgj"
+      }
     } else {
       localStorage.setItem('try', trying + 1)
       localStorage.setItem('today', today)
