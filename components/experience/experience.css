@@ -1,119 +1,115 @@
 #experience {
-    padding-top: 7rem;
+  padding-top: 7rem;
 }
 
-
 .experience__container {
-    grid-template-columns: 1fr 1fr;
-    display: grid;
-    gap: 2rem;
+  grid-template-columns: 1fr 1fr;
+  display: grid;
+  gap: 2rem;
 }
 
 .experience__container > div {
-    background: var(--color-bg-variant);
-    padding: 2.4rem 5rem;
-    border-radius: 2rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
+  background: var(--color-bg-variant);
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
 }
 
 .experience__container > details {
-    background: var(--color-bg-variant);
-    padding: 0.1rem;
-    border-radius: 1rem;
-    border: 1px solid transparent;
-    transition: var(--transition);
-    cursor: no-drop;
+  background: var(--color-bg-variant);
+  padding: 0.1rem;
+  border-radius: 1rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  cursor: no-drop;
 }
 
 .experience__container > div:hover {
-    transform: scale(1.1, 1.1) rotate(6deg) translateX(20px);
-    transition: var(--transition);
-    z-index: 99s;
-    background: transparent;
-    border-color: var(--color-primary-variant);
-    cursor: default;
+  transform: scale(1.1, 1.1) rotate(6deg) translateX(20px);
+  transition: var(--transition);
+  z-index: 99s;
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
 }
 
 .experience__container > div:hover:nth-child(2n) {
-    transform: scale(1.1, 1.1) rotate(-6deg) translateX(20px);
+  transform: scale(1.1, 1.1) rotate(-6deg) translateX(20px);
 }
 
-details > summary::-webkit-details-marker { 
-    color: var(--color-primary);
-    margin-right: 1.5rem;
+details > summary::-webkit-details-marker {
+  color: var(--color-primary);
+  margin-right: 1.5rem;
 }
 
 .experience__container > details:hover {
-    background: transparent;
-    border-color: var(--color-primary-variant);
+  background: transparent;
+  border-color: var(--color-primary-variant);
 }
 
 .experience__container > div h3 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--color-primary);
 }
 
 .experience__container > details summary {
-    cursor: pointer;
-    margin-bottom: 2rem;
-    margin-left: 2rem;
-    color: var(--color-primary);
+  cursor: pointer;
+  margin-bottom: 2rem;
+  margin-left: 2rem;
+  color: var(--color-primary);
 }
 
 .experience__content {
-    padding-left: 5rem;
+  padding-left: 5rem;
 }
 
 .experience__details {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
 }
 
 .experience__details__icon {
-    margin-top: 6px;
-    color: var(--color-primary);
+  margin-top: 6px;
+  color: var(--color-primary);
 }
 
 /* ================= MEDIA QUERIES (MEDIUM DEVICES) ===================== */
 @media screen and (max-width: 1024px) {
+  .experience__container {
+    grid-template-columns: 1fr;
+  }
 
-    .experience__container {
-        grid-template-columns: 1fr;
-    }
+  .experience__container > div {
+    width: 80%;
+    padding: 2rem;
+    margin: 0 auto;
+  }
 
-    .experience__container > div {
-        width: 80%;
-        padding: 2rem;
-        margin: 0 auto;
-    }
+  .experience__content {
+    padding: 1rem;
+  }
 
-    .experience__content {
-        padding: 1rem;
-    }
-
-    .experience__container > div:hover {
-        transform: none;
-    }
+  .experience__container > div:hover {
+    transform: none;
+  }
 }
-  
+
 /* ================= MEDIA QUERIES (SMALL DEVICES) ===================== */
 @media screen and (max-width: 600px) {
-
-    /*.experience__details {
+  /*.experience__details {
         display: block;
         margin-bottom: 1rem;
     }*/
 
-    .experience__container {
-        gap: 1rem;
-    }
+  .experience__container {
+    gap: 1rem;
+  }
 
-    .experience__container > div {
-        width: 100%;
-        padding: 2rem 1rem;
-    }
+  .experience__container > div {
+    width: 100%;
+    padding: 2rem 1rem;
+  }
 }
-

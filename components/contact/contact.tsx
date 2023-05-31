@@ -6,6 +6,8 @@ import { useRef } from "react";
 import { motion } from "framer-motion";
 
 export default function Contact() {
+  console.log("passed");
+  console.log(process.env.REACT_APP_MAIL_SECRET);
   const form = useRef<any>();
   let name = useRef<HTMLInputElement>(null);
   let email = useRef<HTMLInputElement>(null);
@@ -25,7 +27,7 @@ export default function Contact() {
           process.env.MAIL_SERVICE || "service_7yhzpgj",
           process.env.MAIL_TEMPLATE || "template_ii0byap",
           form.current,
-          process.env.MAIL_SECRET
+          process.env.REACT_APP_MAIL_SECRET || "vJvWFLpjMGXSrVSTO"
         );
         e.target.reset();
       }
@@ -37,7 +39,7 @@ export default function Contact() {
         process.env.MAIL_SERVICE || "service_7yhzpgj",
         process.env.MAIL_TEMPLATE || "template_ii0byap",
         form.current,
-        process.env.MAIL_SECRET
+        process.env.REACT_APP_MAIL_SECRET || "vJvWFLpjMGXSrVSTO"
       );
       e.target.reset();
     }
@@ -84,7 +86,6 @@ export default function Contact() {
               Send a message
             </a>
           </article>
-
           {/*
             <article className="contact__option">
             <RiMessengerLine className="contact__option__icon"/>

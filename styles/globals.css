@@ -15,7 +15,7 @@
   --color-primary-variant: #1b1b1b;
   --color-white: #fff;
   --color-light: #fadadd;
-  
+
   --transition: all 400ms ease;
 
   --container-width-lg: 75%;
@@ -39,7 +39,7 @@ html {
 }
 
 body {
-  font-family: 'Poppins', sans-serif;
+  font-family: "Poppins", sans-serif;
   background: var(--color-bg);
   color: var(--color-white);
   line-height: 1.7;
@@ -85,7 +85,7 @@ section > h2 {
 
 a {
   color: var(--color-primary);
-  transition: var(--transition)
+  transition: var(--transition);
 }
 
 a:hover {

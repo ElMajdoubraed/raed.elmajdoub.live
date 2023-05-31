@@ -5,7 +5,7 @@ import Header from "@/components/header/header";
 import About from "@/components/about/about";
 import Experience from "@/components/experience/experience";
 import Services from "@/components/services/services";
-//import Portfolio from '@/components/portfolio/portfolio'
+import Portfolio from "@/components/portfolio/portfolio";
 //import Testimonials from '@/components/testimonials/testimonials'
 import Contact from "@/components/contact/contact";
 
@@ -54,10 +54,13 @@ export default function Index() {
         <About />
         <Experience />
         <Services />
+        <Portfolio />
+
         {/*
           <Portfolio/>
           <Testimonials/>
-           */}
+        */}
+
         <Contact />
       </>
     </>

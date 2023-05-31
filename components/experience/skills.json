@@ -1,62 +1,62 @@
 [
-    {
-        "title": "Frontend Devlopment",
-        "skills" : [
-            "Html 5",
-            "Css 3",
-            "JavaScript",
-            "TypeScript",
-            "ReactJs",
-            "Angular",
-            "Bootstrap",
-            "Material UI",
-            "Ejs",
-            "Sass"
-        ]
-    },
-    {
-        "title": "Backend Development and databases",
-        "skills" : [
-            "Rest API",
-            "NodeJs",
-            "ExpressJs",
-            "Sql",
-            "Mongodb",
-            "Prisma",
-            "Firebase",
-            "Redis",
-            "DynamoDb"
-        ]
-    },
-    {
-        "title": "Infrastructure and deployment",
-        "skills" : [
-            "EC2",
-            "S3",
-            "Aws lambda",
-            "Ubuntu",
-            "Nginx",
-            "CloudFront",
-            "Route53",
-            "PM2",
-            "AWS",
-            "Github actions",
-            "Gitlab CI/CD"
-        ]
-    },
-    {
-        "title": "Tools and Technologies",
-        "skills" : [
-            "Git",
-            "Github",
-            "Npm",
-            "Yarn",
-            "Json",
-            "Jest",
-            "Mocha",
-            "Chai",
-            "Docker",
-            "Docker-compose"
-        ]
-    }
+  {
+    "title": "Frontend Devlopment",
+    "skills": [
+      "Html 5",
+      "Css 3",
+      "JavaScript",
+      "TypeScript",
+      "ReactJs",
+      "Angular",
+      "Bootstrap",
+      "Material UI",
+      "Ejs",
+      "Sass"
+    ]
+  },
+  {
+    "title": "Backend Development and databases",
+    "skills": [
+      "Rest API",
+      "NodeJs",
+      "ExpressJs",
+      "Sql",
+      "Mongodb",
+      "Prisma",
+      "Firebase",
+      "Redis",
+      "DynamoDb"
+    ]
+  },
+  {
+    "title": "Infrastructure and deployment",
+    "skills": [
+      "EC2",
+      "S3",
+      "Aws lambda",
+      "Ubuntu",
+      "Nginx",
+      "CloudFront",
+      "Route53",
+      "PM2",
+      "AWS",
+      "Github actions",
+      "Gitlab CI/CD"
+    ]
+  },
+  {
+    "title": "Tools and Technologies",
+    "skills": [
+      "Git",
+      "Github",
+      "Npm",
+      "Yarn",
+      "Json",
+      "Jest",
+      "Mocha",
+      "Chai",
+      "Docker",
+      "Docker-compose"
+    ]
+  }
 ]

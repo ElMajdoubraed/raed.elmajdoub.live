@@ -1,8 +1,7 @@
----
-name: Build and Deploy portfolio
+name: Build and Deploy portfolio S3
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 jobs:
   build-and-deploy:
     name: Build and Deploy
@@ -14,63 +13,59 @@ jobs:
       DIST_ID: E2C1JYDWOHFIA1
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Configure AWS Credentials
-      uses: aws-actions/configure-aws-credentials@v1
-      with:
-        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        aws-region: ${{ env.REGION }}
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ env.REGION }}
 
-    # - uses: actions/setup-node@v2
-    #   with:
-    #     node-version: '14'
+      - name: Install Dependencies
+        run: |
+          node --version
+          npm ci --production
 
-    - name: Install Dependencies
-      run: |
-        node --version
-        npm ci --production
+      - name: Build Static Website
+        run: |
+          npm install
+          npm install --save-dev typescript @types/react @types/node
+          npm run prod
 
-    - name: Build Static Website
-      run: |
-        npm install
-        npm install --save-dev typescript @types/react @types/node
-        npm run prod
+      - name: Copy files to the production website with the AWS CLI
+        run: |
+          aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
 
-    - name: Copy files to the production website with the AWS CLI
-      run: |
-        aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
-
-    - name: Copy files to the production website with the AWS CLI
-      run: |
-        aws cloudfront create-invalidation \
-          --distribution-id ${{ env.DIST_ID }} \
-          --paths "/*"
+      - name: Copy files to the production website with the AWS CLI
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ env.DIST_ID }} \
+            --paths "/*"
 
   #deploy-lambda-server:
-    #name: Build and Deploy lambda server
-    #runs-on: ubuntu-latest
+  #name: Build and Deploy lambda server
+  #runs-on: ubuntu-latest
 
-    #env:
-      #REGION: us-east-1
-      
-    #steps:
-    #- name: Checkout
-      #uses: actions/checkout@v2
+  #env:
+  #REGION: us-east-1
 
-    #- name: Configure AWS Credentials
-      #uses: aws-actions/configure-aws-credentials@v1
-      #with:
-        #aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-        #aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-        #aws-region: ${{ env.REGION }}
-  
-    #- name: Install Dependencies
-      #run: |
-        #cd server
-        #node --version
-        #npm install
-        #npm i -g serverless
-        #npm run deploy
+  #steps:
+  #- name: Checkout
+  #uses: actions/checkout@v2
+
+  #- name: Configure AWS Credentials
+  #uses: aws-actions/configure-aws-credentials@v1
+  #with:
+  #aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+  #aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+  #aws-region: ${{ env.REGION }}
+
+  #- name: Install Dependencies
+  #run: |
+  #cd server
+  #node --version
+  #npm install
+  #npm i -g serverless
+  #npm run deploy
