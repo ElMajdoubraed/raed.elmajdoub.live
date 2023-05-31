@@ -1,13 +1,10 @@
 import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
-import { RiMessengerLine } from "react-icons/ri";
 import emailjs from "emailjs-com";
 import { useRef } from "react";
 import { motion } from "framer-motion";
 
 export default function Contact() {
-  console.log("passed");
-  console.log(process.env.REACT_APP_MAIL_SECRET);
   const form = useRef<any>();
   let name = useRef<HTMLInputElement>(null);
   let email = useRef<HTMLInputElement>(null);
@@ -23,24 +20,14 @@ export default function Contact() {
         localStorage.setItem("try", "1");
         localStorage.setItem("today", today);
         e.preventDefault();
-        await emailjs.sendForm(
-          process.env.MAIL_SERVICE || "service_7yhzpgj",
-          process.env.MAIL_TEMPLATE || "template_ii0byap",
-          form.current,
-          process.env.REACT_APP_MAIL_SECRET || "vJvWFLpjMGXSrVSTO"
-        );
+        //send email here
         e.target.reset();
       }
     } else {
       localStorage.setItem("try", trying + 1);
       localStorage.setItem("today", today);
       e.preventDefault();
-      await emailjs.sendForm(
-        process.env.MAIL_SERVICE || "service_7yhzpgj",
-        process.env.MAIL_TEMPLATE || "template_ii0byap",
-        form.current,
-        process.env.REACT_APP_MAIL_SECRET || "vJvWFLpjMGXSrVSTO"
-      );
+      //send email here
       e.target.reset();
     }
   };
