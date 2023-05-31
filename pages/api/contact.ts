@@ -17,9 +17,7 @@ export default function handler(
     });
   } else {
     res.status(200).json({
-      message: `
-        jawk behy
-      `,
+      message: `working on ...`,
     });
   }
 }
