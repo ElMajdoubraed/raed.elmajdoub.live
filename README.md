@@ -1,6 +1,4 @@
-[object Object]
 
-```sh
 <h1 align="center">Hi 👋, I'm Raed Elmajdoub</h1>
 <h3 align="center">Full Stack JavaScript/TypeScript and AWS DevOps developer.</h3>
 
@@ -31,5 +29,3 @@
 <p><img align="left" src="https://github-readme-stats.vercel.app/api/top-langs?username=elmajdoubraed&show_icons=true&locale=en&layout=compact" alt="elmajdoubraed" /></p>
 
 <p>&nbsp;<img align="center" src="https://github-readme-stats.vercel.app/api?username=elmajdoubraed&show_icons=true&locale=en" alt="elmajdoubraed" /></p>
-
-```
