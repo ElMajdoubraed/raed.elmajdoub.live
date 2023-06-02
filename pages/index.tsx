@@ -8,6 +8,7 @@ import Services from "@/components/services/services";
 import Portfolio from "@/components/portfolio/portfolio";
 //import Testimonials from '@/components/testimonials/testimonials'
 import Contact from "@/components/contact/contact";
+import Toast from "@/components/templates/toast/toast";
 
 const inter = Inter({ subsets: ["latin"] });
 

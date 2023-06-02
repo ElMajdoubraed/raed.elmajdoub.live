@@ -10,6 +10,7 @@
       "Angular",
       "Bootstrap",
       "Material UI",
+      "Next UI",
       "Ejs",
       "Sass"
     ]
@@ -19,6 +20,7 @@
     "skills": [
       "Rest API",
       "NodeJs",
+      "NextJs",
       "ExpressJs",
       "Sql",
       "Mongodb",
@@ -41,6 +43,7 @@
       "PM2",
       "AWS",
       "Github actions",
+      "Vercel",
       "Gitlab CI/CD"
     ]
   },
@@ -49,6 +52,7 @@
     "skills": [
       "Git",
       "Github",
+      "Socket.io",
       "Npm",
       "Yarn",
       "Json",

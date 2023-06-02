@@ -1,7 +1,7 @@
 const CTA = () => {
   return (
     <div className="cta">
-      <a href="/CV.pdf" download rel="noopener noreferrer" className="btn">
+      <a href={"/CV.pdf"} download rel="noopener noreferrer" className="btn">
         Download CV
       </a>
       <a href="#contact" className="btn btn-primary">
