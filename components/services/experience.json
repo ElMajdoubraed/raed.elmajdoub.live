@@ -28,7 +28,7 @@
       "Docker, docker-compose",
       "Web server : Nginx",
       "Deploy : AWS",
-      "CI/CD : Gitlab CI/CD",
+      "CI/CD : Gitlab CI/CD, Jenkins",
       "Other tools : Ubuntu, Yaml, git"
     ]
   },

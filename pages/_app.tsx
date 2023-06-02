@@ -8,8 +8,11 @@ import "@/components/services/services.css";
 import "@/components/portfolio/portfolio.css";
 import "@/components/testimonials/testimonials.css";
 import "@/components/contact/contact.css";
+import "@/components/templates/templates.scss";
 import type { AppProps } from "next/app";
 import Script from "next/script";
+import { Analytics } from "@vercel/analytics/react";
+
 //import dynamic from "next/dynamic";
 
 export default function App({ Component, pageProps }: AppProps) {
@@ -63,6 +66,7 @@ export default function App({ Component, pageProps }: AppProps) {
       />
       {/* <PwaUpdater/> */}
       <Component {...pageProps} />
+      <Analytics />
     </>
   );
 }

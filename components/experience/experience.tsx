@@ -3,6 +3,12 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import skills from "./skills.json";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+
+interface Iskills {
+  title: string;
+  skills: string[];
+}
+
 export default function Experience() {
   const [isMobile, setIsMobile] = useState(false);
   useEffect(() => {
@@ -11,7 +17,7 @@ export default function Experience() {
       setIsMobile(true);
     }
   });
-  const skillarray: any = skills;
+  const skillarray: Iskills[] = skills;
   return (
     <motion.section
       initial={{
@@ -41,7 +47,7 @@ export default function Experience() {
       >
         {!isMobile ? (
           <>
-            {skillarray.map((skill: any, index: number) => (
+            {skillarray.map((skill: Iskills, index: number) => (
               <div key={"experience_" + index} className="experience__frontend">
                 <h3>{skill.title}</h3>
                 {skill.skills.map((e: string, i: number) => (
@@ -57,7 +63,7 @@ export default function Experience() {
           </>
         ) : (
           <>
-            {skillarray.map((skill: any, index: number) => (
+            {skillarray.map((skill: Iskills, index: number) => (
               <details
                 key={"experience_mobile_" + index}
                 className="experience__frontend"

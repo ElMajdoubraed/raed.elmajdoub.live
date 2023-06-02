@@ -1,7 +1,6 @@
 import { BsWhatsapp } from "react-icons/bs";
 import { MdOutlineEmail } from "react-icons/md";
-import emailjs from "emailjs-com";
-import { useRef } from "react";
+import { FormEvent, useRef } from "react";
 import { motion } from "framer-motion";
 
 export default function Contact() {
@@ -96,7 +95,7 @@ export default function Contact() {
           </article>
         </div>
 
-        <form ref={form} onSubmit={(e: any) => sendEmail(e)}>
+        <form ref={form} onSubmit={(e: FormEvent) => sendEmail(e)}>
           <input
             ref={name}
             type="text"

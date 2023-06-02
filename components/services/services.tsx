@@ -7,6 +7,14 @@ import experiences from "./experience.json";
 import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
+
+interface Iexperience {
+  index?: number;
+  title: string;
+  description: string;
+  tasks: string[];
+}
+
 export default function Services() {
   const experience_array: Experience[] = experiences;
   const [slideNum, setSlideNum] = useState(1);
@@ -45,7 +53,7 @@ export default function Services() {
         pagination={{ clickable: true }}
         className="container services__container"
       >
-        {experience_array.map((experience: any, index: number) => (
+        {experience_array.map((experience: Iexperience, index: number) => (
           <SwiperSlide key={"experience_key_" + index} className="service">
             <div className="service__head">
               <h3 className="hidden">Raed elmajdoub - {experience.title}</h3>
