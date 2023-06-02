@@ -1,5 +1,3 @@
-[object Object]
-
 <h1 align="center">Hi 👋, I'm Raed Elmajdoub</h1>
 <h3 align="center">Full Stack JavaScript/TypeScript and AWS DevOps developer.</h3>
 
