@@ -14,7 +14,7 @@ export default function Experience() {
   useEffect(() => {
     var w = window.innerWidth;
     if (w < 1024) {
-      setIsMobile(true);
+      //setIsMobile(true);
     }
   });
   const skillarray: Iskills[] = skills;

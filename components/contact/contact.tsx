@@ -120,7 +120,7 @@ export default function Contact() {
             placeholder="Your Message"
             required
           ></textarea>
-          <button type="submit" className="btn btn-primary w-100">
+          <button type="submit" className="btn btn-primary">
             Send Message
           </button>
         </form>
