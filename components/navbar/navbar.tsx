@@ -1,15 +1,11 @@
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook, BiMessageSquareDetail } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
-import { FaLanguage } from "react-icons/fa";
 import { useState } from "react";
 
 export default function Navbar() {
   const [active, setActive] = useState("#header");
 
-  const downloadAr = () => {
-    console.log("ar");
-  };
   return (
     <nav id="nav">
       <a
@@ -46,9 +42,6 @@ export default function Navbar() {
         href="#contact"
       >
         <BiMessageSquareDetail />
-      </a>
-      <a onClick={() => downloadAr()}>
-        <FaLanguage />
       </a>
     </nav>
   );
