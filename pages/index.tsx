@@ -16,10 +16,8 @@ export default function Index() {
   return (
     <>
       <Head>
-        <meta name="robots" content="noindex,nofollow" />
-        <meta name="robots" content="all" />
-        <meta name="googlebot" content="noindex,nofollow" />
-        <meta name="google" content="nositelinkssearchbox" />
+        <meta name="robots" content="noindex" />
+        <meta name="googlebot" content="noindex" />
         <link rel="apple-touch-icon" href="/icon-192x192.png" />
         <meta name="google" content="notranslate" />
         <meta
