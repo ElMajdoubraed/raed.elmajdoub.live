@@ -12,23 +12,32 @@ export default function Portfolio() {
           {_projects.map((project: Project, index: number) => (
             <article className="portfolio__item">
               <div className="portfolio__item__image">
-                <img
-                  className="portfolio__img"
-                  src={project.img_path}
-                  alt={"Raed elmajdoub project : " + project.title}
-                />
+                <picture>
+                  <source type="image/webp" />
+                  <img
+                    className="portfolio__img"
+                    src={project.img_path}
+                    alt={"Raed elmajdoub project : " + project.title}
+                  />
+                </picture>
               </div>
               <h3>{project.title}</h3>
               <div className="portfolio__item__cta">
                 <a
                   className="btn btn-primary"
                   target="_blank"
+                  rel="noopener"
                   href={project.github}
                 >
                   Github
                 </a>
                 {project.demo ? (
-                  <a className="btn" target="_blank" href={project.demo}>
+                  <a
+                    className="btn"
+                    rel="noopener"
+                    target="_blank"
+                    href={project.demo}
+                  >
                     Live demo
                   </a>
                 ) : (

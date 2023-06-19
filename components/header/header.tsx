@@ -42,7 +42,6 @@ export default function Header() {
           </h1>
         </div>
         <h1 className="hidden">Raed Elmajdoub</h1>
-        <h1 className="hidden">ElMajdoub.live</h1>
         <h5 className="text-light">Fullstack JS/TS, DEVOPS</h5>
         <CTA />
         <Animation />

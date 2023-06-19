@@ -68,7 +68,7 @@ export default function Contact() {
             <MdOutlineEmail className="contact__option__icon" />
             <h4>Email</h4>
             <h5>raed@elmajdoub.live</h5>
-            <a href="mailto:raed@elmajdoub.live" target="_blank">
+            <a href="mailto:raed@elmajdoub.live" rel="noopener" target="_blank">
               Send a message
             </a>
           </article>
@@ -89,7 +89,7 @@ export default function Contact() {
             <BsWhatsapp className="contact__option__icon" />
             <h4>Whatsapp</h4>
             <h5>+216 29.497.446</h5>
-            <a href="https://wa.me/+21629497446" target="_blank">
+            <a href="https://wa.me/+21629497446" rel="noopener" target="_blank">
               Send a message
             </a>
           </article>

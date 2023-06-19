@@ -24,12 +24,7 @@ export default function NotFound() {
 
       <div className="container about__container">
         <div className="about__me">
-          <div
-            className="me"
-            style={{
-              textAlign: "center",
-            }}
-          >
+          <div className="me text-center">
             <h5>Page Not Found</h5>
             <h2>4.0.4</h2>
           </div>

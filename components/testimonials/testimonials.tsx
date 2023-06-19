@@ -20,7 +20,10 @@ export default function Testimonials() {
       >
         <SwiperSlide className="testimonials">
           <div className="client__avatar">
-            <img src="/images/client-1.jpg" alt="alt client" />
+            <picture>
+              <source type="image/webp" />
+              <img src="/images/client-1.jpg" alt="alt client" />
+            </picture>
           </div>
           <h5 className="client__name">TEST USER</h5>
           <small className="client__review">
@@ -32,7 +35,10 @@ export default function Testimonials() {
 
         <SwiperSlide className="testimonials">
           <div className="client__avatar">
-            <img src="/images/client-1.jpg" alt="alt client" />
+            <picture>
+              <source type="image/webp" />
+              <img src="/images/client-1.jpg" alt="alt client" />
+            </picture>
           </div>
           <h5 className="client__name">TEST USER</h5>
           <small className="client__review">
@@ -44,7 +50,10 @@ export default function Testimonials() {
 
         <SwiperSlide className="testimonials">
           <div className="client__avatar">
-            <img src="/images/client-1.jpg" alt="alt client" />
+            <picture>
+              <source type="image/webp" />
+              <img src="/images/client-1.jpg" alt="alt client" />
+            </picture>
           </div>
           <h5 className="client__name">TEST USER</h5>
           <small className="client__review">

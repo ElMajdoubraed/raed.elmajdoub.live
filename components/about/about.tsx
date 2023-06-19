@@ -22,17 +22,19 @@ export default function About() {
     >
       <h5>Get To Know</h5>
       <h2>About Me</h2>
-      <h1 className="hidden">Raed elmajdoub</h1>
 
       <div className="container about__container">
         <div className="about__me">
           <div className="me">
-            <Image
-              className="image-next"
-              alt="Raed elmajdoub portfolio"
-              fill
-              src={profile}
-            ></Image>
+            <picture>
+              <source type="image/webp" />
+              <Image
+                className="image-next"
+                alt="Raed elmajdoub portfolio"
+                fill
+                src={profile}
+              ></Image>
+            </picture>
           </div>
         </div>
 

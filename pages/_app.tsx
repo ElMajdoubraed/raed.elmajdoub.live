@@ -21,7 +21,7 @@ export default function App({ Component, pageProps }: AppProps) {
     <>
       <SEO
         title="Raed Elmajdoub - FullStack JavaScript/TypeScript"
-        description="As a Full Stack JavaScript/TypeScript and AWS DevOps developer, I specialize in building scalable applications using React, Node.js, and AWS services."
+        description="Raed Elmajdoub, Full Stack JavaScript/TypeScript and AWS DevOps developer, I specialize in building scalable applications using React, Node.js, and AWS services."
         keywords={[
           "raed elmajdoub",
           "elmajdoub",

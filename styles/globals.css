@@ -154,3 +154,7 @@ a:hover {
   justify-content: center;
   margin-top: 10rem !important;
 }
+
+.text-center {
+  text-align: center !important;
+}
