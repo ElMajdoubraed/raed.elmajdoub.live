@@ -48,7 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Script src="https://cdnjs.cloudflare.com/ajax/libs/script.js/2.0.2/script.min.js" />
       <Script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=G-1XSLL064K5"
+        src="https://www.googletagmanager.com/gtag/js?id=GTM-K5BDHL9"
       />
       <Script
         id="google-analytics"
