@@ -30,7 +30,7 @@ export default function About() {
               <source type="image/webp" />
               <Image
                 className="image-next"
-                alt="Raed elmajdoub portfolio"
+                alt="Raed elmajdoub"
                 fill
                 src={profile}
               ></Image>

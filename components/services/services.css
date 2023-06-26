@@ -9,7 +9,6 @@
 }
 
 .swiper-pagination-bullet {
-  margin-top: 5rem !important;
   background: var(--color-primary) !important;
   size: 20rem;
 }

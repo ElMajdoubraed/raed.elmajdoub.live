@@ -48,8 +48,10 @@ export default function Services() {
       <Swiper
         modules={[Pagination]}
         spaceBetween={40}
+        autoplay={true}
         slidesPerView={slideNum}
         navigation
+        scrollbar={{ draggable: true }}
         pagination={{ clickable: true }}
         className="container services__container"
       >

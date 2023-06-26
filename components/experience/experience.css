@@ -36,6 +36,7 @@
 
 .experience__container > div:hover:nth-child(2n) {
   transform: scale(1.1, 1.1) rotate(-6deg) translateX(20px);
+  transition: var(--transition);
 }
 
 details > summary::-webkit-details-marker {
@@ -95,15 +96,14 @@ details > summary::-webkit-details-marker {
   .experience__container > div:hover {
     transform: none;
   }
+
+  .experience__container > div:hover:nth-child(2n) {
+    transform: none;
+  }
 }
 
 /* ================= MEDIA QUERIES (SMALL DEVICES) ===================== */
 @media screen and (max-width: 600px) {
-  /*.experience__details {
-        display: block;
-        margin-bottom: 1rem;
-    }*/
-
   .experience__container {
     gap: 1rem;
   }
