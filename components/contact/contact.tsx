@@ -67,6 +67,7 @@ export default function Contact() {
             code: "11ASVG5VI0uELSGNZ1NI2J",
           })
           .then(function (response) {
+            console.log(response);
             alert("Email send");
           })
           .catch(function (error) {
