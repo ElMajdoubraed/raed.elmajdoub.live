@@ -1,15 +1,17 @@
 /** @type {import('next').NextConfig} */
 
 const config = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     unoptimized: true,
+  },
+  compiler: {
+    styledComponents: true,
   },
   webpack: (config, { isServer }) => {
     if (!isServer) {
       config.resolve.fallback.fs = false;
     }
-
     return config;
   },
   async rewrites() {

@@ -30,29 +30,12 @@ export default function Contact() {
               code,
             })
             .then(function (response) {
-              alert("Email send");
-            })
-            .catch(function (error) {
-              console.log(error);
-            });
-        } else {
-          axios
-            .post("https://raed.elmajdoub.live/api/contact", {
-              email: email.current?.value as any,
-              name: name.current?.value,
-              message: message.current?.value,
-              code: "11ASVG5VI0uELSGNZ1NI2J",
-            })
-            .then(function (response) {
-              console.log(response);
-              alert("Email send");
+              alert("Email sent successfully");
             })
             .catch(function (error) {
               console.log(error);
             });
         }
-        e.preventDefault();
-        e.target.reset();
       }
     } else {
       localStorage.setItem("try", trying + 1);
@@ -68,22 +51,7 @@ export default function Contact() {
           })
           .then(function (response) {
             console.log(response);
-            alert("Email send");
-          })
-          .catch(function (error) {
-            console.log(error);
-          });
-      } else {
-        axios
-          .post("https://raed.elmajdoub.live/api/contact", {
-            email: email.current?.value as any,
-            name: name.current?.value,
-            message: message.current?.value,
-            code: "11ASVG5VI0uELSGNZ1NI2J",
-          })
-          .then(function (response) {
-            console.log(response);
-            alert("Email send");
+            alert("Email sent successfully");
           })
           .catch(function (error) {
             console.log(error);
@@ -163,6 +131,7 @@ export default function Contact() {
 
         <form ref={form} onSubmit={(e: FormEvent) => sendEmail(e)}>
           <input
+            className="input"
             ref={name}
             type="text"
             name="name"
@@ -171,6 +140,7 @@ export default function Contact() {
             required
           />
           <input
+            className="input"
             ref={email}
             type="email"
             name="email"
@@ -179,6 +149,7 @@ export default function Contact() {
             required
           />
           <textarea
+            className="textarea"
             ref={message}
             rows={7}
             name="message"

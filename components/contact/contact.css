@@ -69,8 +69,8 @@ form {
   gap: 1.2rem;
 }
 
-input,
-textarea {
+.input,
+.textarea {
   width: 100%;
   padding: 1.5rem;
   border-radius: 0.6rem;
@@ -80,9 +80,10 @@ textarea {
   color: var(--color-white);
 }
 
-input:focus,
-textarea:focus {
+.input:focus,
+.textarea:focus {
   transform: scale(1.2);
+  transition: var(--transition);
 }
 
 /* ================= MEDIA QUERIES (MEDIUM DEVICES) ===================== */
