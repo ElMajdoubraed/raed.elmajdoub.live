@@ -54,10 +54,7 @@ export default function Index() {
         <meta property="og:image:width" content="256" />
         <meta property="og:url" content="https://elmajdoub.live" />
         <meta property="og:type" content="website" />
-        <meta
-          property="og:image"
-          content="https://avatars.hsoubcdn.com/cd06dde7022c6f09207822d4c27cc128?s=128"
-        />
+        <meta property="og:image" content="/icon-192x192.png" />
       </Head>
       <>
         <Header />
