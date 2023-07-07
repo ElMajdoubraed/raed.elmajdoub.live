@@ -9,11 +9,14 @@
     "url": "https://www.elmajdoub.live"
   },
   "scripts": {
-    "dev": "NODE_OPTIONS='-r @newrelic/next' next",
-    "build": "next build",
+    "dev": "next dev",
+    "dev:new": "NODE_OPTIONS='-r @newrelic/next' next",
+    "build": "NODE_OPTIONS='-r @newrelic/next' next build",
     "start": "NODE_OPTIONS='-r @newrelic/next' next start",
     "lint": "next lint",
-    "prod": "next build && next export -o build"
+    "prod": "next build && next export -o build",
+    "ts:w": "tsc -w",
+    "ts": "tsc"
   },
   "dependencies": {
     "@bradgarropy/next-seo": "^1.2.0",
@@ -26,6 +29,8 @@
     "fs": "^0.0.1-security",
     "jquery": "^3.7.0",
     "loadsh": "^0.0.4",
+    "lodash-es": "^4.17.21",
+    "moment": "^2.29.4",
     "newrelic": "^9.13.0",
     "next": "^13.2.3",
     "next-pwa": "^5.6.0",
@@ -44,6 +49,7 @@
   "devDependencies": {
     "@types/jquery": "^3.5.16",
     "@types/lodash": "^4.14.195",
+    "@types/lodash-es": "^4.17.7",
     "@types/node": "18.14.6",
     "@types/react": "18.0.28",
     "@types/react-gtm-module": "^2.0.1",

@@ -82,7 +82,7 @@ form {
 
 .input:focus,
 .textarea:focus {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: var(--transition);
 }
 
@@ -97,8 +97,8 @@ form {
     margin-bottom: 9rem !important;
   }
 
-  input:focus,
-  textarea:focus {
+  .input:focus,
+  .textarea:focus {
     transform: scale(1.05);
   }
 }
@@ -113,8 +113,8 @@ form {
     margin-bottom: 9rem !important;
   }
 
-  input:focus,
-  textarea:focus {
+  .input:focus,
+  .textarea:focus {
     transform: scale(1.05);
   }
 }

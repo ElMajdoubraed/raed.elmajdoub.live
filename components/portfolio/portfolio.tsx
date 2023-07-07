@@ -1,5 +1,6 @@
 import projects from "./portfolio.json";
 import { Project } from "./Project";
+import _ from "lodash-es";
 export default function Portfolio() {
   const _projects: Project[] = projects;
   return _projects && _projects.length > 0 ? (
@@ -9,8 +10,11 @@ export default function Portfolio() {
         <h2>Portfolio</h2>
 
         <div className="container portfolio__container">
-          {_projects.map((project: Project, index: number) => (
-            <article className="portfolio__item">
+          {_.map(_projects, (project: Project, index: number) => (
+            <article
+              key={"Raed elmajdoub project_" + index}
+              className="portfolio__item"
+            >
               <div className="portfolio__item__image">
                 <picture>
                   <source type="image/webp" />

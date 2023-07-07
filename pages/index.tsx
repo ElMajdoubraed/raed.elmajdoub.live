@@ -9,10 +9,28 @@ import Portfolio from "@/components/portfolio/portfolio";
 //import Testimonials from '@/components/testimonials/testimonials'
 import Contact from "@/components/contact/contact";
 import Toast from "@/components/templates/toast/toast";
+import $ from "jquery";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Index() {
+  var mypages: any = [];
+  useEffect(() => {
+    // get all your page elements
+    $("section").each(function (el) {
+      mypages.push({
+        pagename: $(this).attr("id"),
+        pagetop: $(this).offset()?.top,
+      });
+    });
+    $(window).on("scroll", function () {
+      $.each(mypages, function (i, page) {
+        //console.log(i, page);
+      });
+    });
+  }, []);
+
   return (
     <>
       <Head>
@@ -24,10 +42,6 @@ export default function Index() {
         />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com"></link>
-        <link
-          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap"
-          rel="stylesheet"
-        ></link>
         <meta property="og:site_name" content="raed elmajdoub" />
         <meta property="og:locale" content="en" />
         <meta property="og:locale:alternate" content="en" />

@@ -9,7 +9,7 @@ const EmailTemplate = `
       <div>
         <img
           style="margin-bottom: 4rem; color: #d3af37"
-          src="https://raed.elmajdoub.live/favicon.ico"
+          src="https://raed.elmajdoub.live/raed_elmajdoub_logo_email.png"
           width="80"
           height="80"
         />
