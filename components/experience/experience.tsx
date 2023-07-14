@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import skills from "./skills.json";
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
-import _ from "lodash-es";
+import { map } from "lodash";
 
 interface Iskills {
   title: string;
@@ -48,7 +48,7 @@ export default function Experience() {
       >
         {!isMobile ? (
           <>
-            {_.map(skillarray, (skill: Iskills, index: number) => (
+            {map(skillarray, (skill: Iskills, index: number) => (
               <div key={"experience_" + index} className="experience__frontend">
                 <h3>{skill.title}</h3>
                 {skill.skills.map((e: string, i: number) => (
@@ -64,7 +64,7 @@ export default function Experience() {
           </>
         ) : (
           <>
-            {_.map(skillarray, (skill: Iskills, index: number) => (
+            {map(skillarray, (skill: Iskills, index: number) => (
               <details
                 key={"experience_mobile_" + index}
                 className="experience__frontend"

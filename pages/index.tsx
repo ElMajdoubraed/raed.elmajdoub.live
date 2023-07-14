@@ -1,18 +1,13 @@
 import Head from "next/head";
-import { Inter } from "next/font/google";
 import Navbar from "@/components/navbar/navbar";
 import Header from "@/components/header/header";
 import About from "@/components/about/about";
 import Experience from "@/components/experience/experience";
 import Services from "@/components/services/services";
 import Portfolio from "@/components/portfolio/portfolio";
-//import Testimonials from '@/components/testimonials/testimonials'
 import Contact from "@/components/contact/contact";
-import Toast from "@/components/templates/toast/toast";
 import $ from "jquery";
 import { useEffect } from "react";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Index() {
   var mypages: any = [];
@@ -47,7 +42,7 @@ export default function Index() {
         <meta property="og:locale:alternate" content="en" />
         <meta
           property="og:description"
-          content="As a Full Stack JavaScript/TypeScript and AWS DevOps developer, I specialize in building scalable applications using React, Node.js, and AWS services."
+          content="Raed Elmajdoub, Full Stack JavaScript/TypeScript and AWS DevOps developer, I specialize in building scalable applications using React, Node.js, and AWS services."
         />
         <meta property="og:title" content="Raed Elmajdoub" />
         <meta property="og:image:height" content="256" />
@@ -63,12 +58,7 @@ export default function Index() {
         <Experience />
         <Services />
         <Portfolio />
-
-        {/*
-          <Portfolio/>
-          <Testimonials/>
-        */}
-
+        {/* <Portfolio/> */}
         <Contact />
       </>
     </>

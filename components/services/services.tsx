@@ -7,6 +7,7 @@ import experiences from "./experience.json";
 import "swiper/css";
 import "swiper/css/pagination";
 import { motion } from "framer-motion";
+import $ from "jquery";
 
 interface Iexperience {
   index?: number;
@@ -19,7 +20,7 @@ export default function Services() {
   const experience_array: Experience[] = experiences;
   const [slideNum, setSlideNum] = useState(1);
   useEffect(() => {
-    var w = window.innerWidth;
+    var w = $(document).width() as number;
     if (w > 1024) {
       setSlideNum(3);
     }

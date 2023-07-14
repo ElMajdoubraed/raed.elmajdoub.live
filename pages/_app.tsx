@@ -8,7 +8,6 @@ import "@/components/services/services.css";
 import "@/components/portfolio/portfolio.css";
 import "@/components/testimonials/testimonials.css";
 import "@/components/contact/contact.css";
-import "@/components/templates/templates.scss";
 import type { AppProps } from "next/app";
 import Script from "next/script";
 import { Analytics } from "@vercel/analytics/react";

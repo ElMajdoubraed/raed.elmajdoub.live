@@ -4,6 +4,7 @@ import { FormEvent, useRef } from "react";
 import { motion } from "framer-motion";
 import axios from "axios";
 import moment from "moment";
+import { message as msg } from "antd";
 export default function Contact() {
   const form = useRef<any>();
   let name = useRef<HTMLInputElement>(null);
@@ -12,17 +13,21 @@ export default function Contact() {
   const source = process.env.NEXT_PUBLIC_SOURCE;
   const code = process.env.NEXT_PUBLIC_CODE;
   const sendEmail = async (e: any) => {
+    e.preventDefault();
     const trying: string = (await localStorage.getItem("try")) || "";
     const utc = await localStorage.getItem("today");
     const today = moment().format("MMM Do YY");
     if (trying && trying.length > 3) {
       if (utc === today) {
-        return alert("You have sent too many messages, please try again later");
+        return msg.error(
+          "You have sent too many messages, please try again later"
+        );
       } else {
         localStorage.setItem("try", "1");
         localStorage.setItem("today", today);
         if (source) {
-          axios
+          msg.loading("Please wait ...");
+          await axios
             .post("/api/contact", {
               email: email.current?.value as any,
               name: name.current?.value,
@@ -30,28 +35,28 @@ export default function Contact() {
               code,
             })
             .then(function (response) {
-              alert("Email sent successfully");
+              msg.success("Email sent successfully !");
             })
             .catch(function (error) {
-              console.log(error);
+              msg.error("Something wrong .");
+              console.error(error);
             });
         }
       }
     } else {
       localStorage.setItem("try", trying + 1);
       localStorage.setItem("today", today);
-      e.preventDefault();
       if (source) {
-        axios
+        msg.loading("Please wait ...");
+        await axios
           .post("/api/contact", {
             email: email.current?.value as any,
             name: name.current?.value,
             message: message.current?.value,
-            code: "11ASVG5VI0uELSGNZ1NI2J",
+            code,
           })
           .then(function (response) {
-            console.log(response);
-            alert("Email sent successfully");
+            msg.success("Email sent successfully !");
           })
           .catch(function (error) {
             console.log(error);
