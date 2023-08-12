@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Weather App",
+    "img_path": "/portfolio-images/projects/weather.png",
+    "github": "https://github.com/ElMajdoubraed/Weather-App",
+    "demo": "https://play.google.com/store/apps/details?id=com.raedelmajdoub.Weatherapp"
+  },
+  {
+    "title": "Menu Folio",
+    "img_path": "https://menu.elmajdoub.live/images/home/home.png",
+    "github": "https://github.com/ElMajdoubraed/menu-folio",
+    "demo": "https://menu.elmajdoub.live"
+  },
+  {
+    "title": "Food Recipes",
+    "img_path": "/portfolio-images/projects/food.png",
+    "github": "https://github.com/ElMajdoubraed/Food_Recipes",
+    "demo": "https://recipes.elmajdoub.live"
+  },
+  {
+    "title": "Landing pages",
+    "img_path": "/portfolio-images/projects/landing.png",
+    "github": "https://github.com/ElMajdoubraed/Landing-pages",
+    "demo": "https://landing.elmajdoub.live"
+  },
+  {
+    "title": "Q&A and discussion application ",
+    "img_path": "/portfolio-images/projects/q&a.jpg",
+    "github": "https://github.com/ElMajdoubraed/hsoub_cours_next.io",
+    "demo": "https://hsoub-cours-next-io.vercel.app"
+  },
+  {
+    "title": "Qr Code Scanner and Generator",
+    "img_path": "/portfolio-images/projects/qr.png",
+    "github": "https://github.com/ElMajdoubraed/raed.elmajdoub.live/blob/main/pages/projects/demo/qr.tsx",
+    "demo": "https://elmajdoub.live/qr"
+  }
+]

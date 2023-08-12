@@ -1,0 +1,26 @@
+name: Node.js CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [18.x]
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+      - run: |
+          export NVM_DIR="$HOME/.nvm"
+          [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+          nvm install --lts
+          npm install --legacy-peer-deps && npm run build
+          npm run prod

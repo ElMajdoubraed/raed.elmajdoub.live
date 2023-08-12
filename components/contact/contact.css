@@ -1,0 +1,128 @@
+.container.contact__container {
+  width: 58%;
+  display: grid;
+  grid-template-columns: 30% 58%;
+  gap: 12%;
+}
+
+.contact__options {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contact__option {
+  background: var(--color-bg-variant);
+  padding: 1.2rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  transition: var(--transition);
+  border: 1px solid transparent;
+  cursor: pointer;
+}
+
+.contact__option:hover {
+  border-color: var(--color-primary-variant);
+  background: transparent;
+  animation: contact__animation__hover 1s linear 1;
+}
+
+@keyframes contact__animation__hover {
+  50% {
+    transform: scale(1.1);
+  }
+  from {
+    transform: rotate(6deg);
+    color: var(--color-primary);
+  }
+  to {
+    transform: rotate(-6deg);
+    color: var(--color-bg-variant);
+  }
+}
+
+@keyframes contact__animation {
+  from {
+    transform: rotate(8deg);
+    color: var(--color-primary);
+  }
+  to {
+    transform: rotate(-8deg);
+    color: var(--color-bg-variant);
+  }
+}
+
+.contact__option__icon {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.contact__option a {
+  margin-top: 0.7rem;
+  display: inline-block;
+  font-size: 0.8rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  padding: 1.5rem;
+  border-radius: 0.6rem;
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  resize: none;
+  color: var(--color-white);
+}
+
+.input:focus:not(#qr-code),
+.textarea:focus {
+  transform: scale(1.1);
+  transition: var(--transition);
+}
+
+/* ================= MEDIA QUERIES (MEDIUM DEVICES) ===================== */
+@media screen and (max-width: 1024px) {
+  .container.contact__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  #contact {
+    margin-bottom: 9rem !important;
+  }
+
+  .input:focus,
+  .textarea:focus {
+    transform: scale(1.05);
+  }
+}
+
+/* ================= MEDIA QUERIES (SMALL DEVICES) ===================== */
+@media screen and (max-width: 600px) {
+  .container.contact__container {
+    width: var(--container-width-sm);
+  }
+
+  #contact {
+    margin-bottom: 9rem !important;
+  }
+
+  .input:focus,
+  .textarea:focus {
+    transform: scale(1.05);
+  }
+}
+
+#contact {
+  margin-bottom: 9rem !important;
+}
+
+.custom__link {
+  color: #fff !important;
+}

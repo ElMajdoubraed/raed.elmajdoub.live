@@ -1,0 +1,66 @@
+[
+  {
+    "title": "Frontend Devlopment",
+    "skills": [
+      "Html 5",
+      "Css 3",
+      "JavaScript",
+      "TypeScript",
+      "ReactJs",
+      "Angular",
+      "Bootstrap",
+      "Material UI",
+      "Next UI",
+      "Ejs",
+      "Sass"
+    ]
+  },
+  {
+    "title": "Backend Development and databases",
+    "skills": [
+      "Rest API",
+      "NodeJs",
+      "NextJs",
+      "ExpressJs",
+      "Sql",
+      "Mongodb",
+      "Prisma",
+      "Firebase",
+      "Redis",
+      "DynamoDb"
+    ]
+  },
+  {
+    "title": "Infrastructure and deployment",
+    "skills": [
+      "EC2",
+      "S3",
+      "Aws lambda",
+      "Ubuntu",
+      "Nginx",
+      "CloudFront",
+      "Route53",
+      "PM2",
+      "AWS",
+      "Github actions",
+      "Vercel",
+      "Gitlab CI/CD"
+    ]
+  },
+  {
+    "title": "Tools and Technologies",
+    "skills": [
+      "Git",
+      "Github",
+      "Socket.io",
+      "Npm",
+      "Yarn",
+      "Json",
+      "Jest",
+      "Mocha",
+      "Chai",
+      "Docker",
+      "Docker-compose"
+    ]
+  }
+]
