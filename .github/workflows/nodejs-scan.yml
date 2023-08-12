@@ -22,5 +22,5 @@ jobs:
           export NVM_DIR="$HOME/.nvm"
           [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
           nvm install --lts
-          npm install && npm run build
+          npm install --legacy-peer-deps && npm run build
           npm run prod

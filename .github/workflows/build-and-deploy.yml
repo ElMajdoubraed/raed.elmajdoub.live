@@ -30,8 +30,8 @@ jobs:
 
       - name: Build Static Website
         run: |
-          npm install
-          npm install --save-dev typescript @types/react @types/node
+          npm install --legacy-peer-deps
+          npm install --save-dev typescript @types/react @types/node --legacy-peer-deps
           npm run prod
 
       - name: Copy files to the production website with the AWS CLI
@@ -66,6 +66,6 @@ jobs:
   #run: |
   #cd server
   #node --version
-  #npm install
+  #npm install --legacy-peer-deps
   #npm i -g serverless
   #npm run deploy
