@@ -18,8 +18,14 @@
 }
 
 .portfolio__item__image {
+<<<<<<< HEAD
   overflow: hidden;
   border-radius: 1.5rem;
+=======
+  display: flex;
+  justify-content: center;
+  align-items: center;
+>>>>>>> master
 }
 
 .portfolio__item h3 {
