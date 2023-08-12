@@ -90,8 +90,44 @@ a {
   transition: var(--transition);
 }
 
+#button__a {
+  width: 100%;
+  color: var(--color-primary);
+  transition: var(--transition);
+  padding: 0.75rem 1.2rem;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  border: 1px solid var(--color-primary);
+  background-color: transparent;
+}
+
 a:hover {
   color: var(--color-white);
+}
+
+#button__a:hover {
+  border-color: transparent;
+  background: var(--color-white);
+  color: var(--color-bg);
+}
+
+input[type="color"] {
+  width: 20px;
+  cursor: pointer;
+  height: 20px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+input[type="color"]::-webkit-color-swatch {
+  border-radius: 50%;
+  padding: 0;
+}
+
+input[type="color"]::-webkit-color-swatch-wrapper {
+  border: 1px solid var(--color-primary);
+  border-radius: 50%;
+  padding: 0;
 }
 
 .btn {
@@ -159,4 +195,16 @@ a:hover {
 
 .text-center {
   text-align: center !important;
+}
+
+code {
+  background: var(--color-bg-variant);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
+}
+
+.code__p {
+  background: var(--color-primary-variant);
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.4rem;
 }

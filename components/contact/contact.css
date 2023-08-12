@@ -80,7 +80,7 @@ form {
   color: var(--color-white);
 }
 
-.input:focus,
+.input:focus:not(#qr-code),
 .textarea:focus {
   transform: scale(1.1);
   transition: var(--transition);
