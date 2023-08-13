@@ -2,9 +2,9 @@
 <h3 align="center">Full Stack JavaScript/TypeScript and AWS DevOps developer.</h3>
 
 - 🔭 I’m currently working on [Leadshook](https://leadshook.com)
-- 🌱 I’m currently learning **NestJs, Jenkins, React Native, Ionic**
+- 🌱 I’m currently learning **NestJs, Ruby, ElectronJs, and Ionic**
 - 👨‍💻 All of my projects are available at [https://raed.elmajdoub.live/](https://raed.elmajdoub.live/)
-- 💬 Ask me about **ReactJs, NextJs, NodeJs, MongoDb**
+- 💬 Ask me about **ReactJs, NextJs, NodeJs, MongoDB**
 - 📫 How to reach me **raed.elmajdoub@gmail.com**
 - 📄 Know about my experiences [https://raed.elmajdoub.live/CV.pdf](https://raed.elmajdoub.live/CV.pdf)
 
