@@ -1,0 +1,33 @@
+pipeline {
+    agent any
+
+    tools {nodejs "nodejs"}
+
+    stages {
+        stage('Clean Up') {
+            steps {
+                deleteDir()
+            }
+        }
+        stage('Clone Repo') {
+            steps {
+                sh 'git clone https://github.com/ElMajdoubraed/raed.elmajdoub.live.git'
+            }
+        }
+        stage('Build') {
+            steps {
+                dir('raed.elmajdoub.live') {
+                    sh 'npm install'
+                    sh 'npm run build'
+                }
+            }
+        }
+        stage('Test') {
+            steps {
+                dir('raed.elmajdoub.live') {
+                    sh 'echo "No tests"'
+                }
+            }
+        }
+    }
+}
