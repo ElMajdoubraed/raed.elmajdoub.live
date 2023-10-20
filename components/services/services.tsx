@@ -1,11 +1,12 @@
 import { BiCheck } from "react-icons/bi";
-import { Pagination } from "swiper";
+import { Pagination, Navigation } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
 import { Experience } from "./Experience";
 import experiences from "./experience.json";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { motion } from "framer-motion";
 import $ from "jquery";
 
@@ -21,10 +22,24 @@ export default function Services() {
   const [slideNum, setSlideNum] = useState(1);
   useEffect(() => {
     var w = $(document).width() as number;
-    if (w > 1024) {
+    if (w > 1250) {
       setSlideNum(3);
     }
   });
+  if (typeof window !== "undefined") {
+    window.addEventListener(
+      "resize",
+      function (event) {
+        var w = $(document).width() as number;
+        if (w > 1250) {
+          setSlideNum(3);
+        } else {
+          setSlideNum(1);
+        }
+      },
+      true
+    );
+  }
   return (
     <motion.section
       initial={{
@@ -47,11 +62,11 @@ export default function Services() {
       <h2>Experience</h2>
 
       <Swiper
-        modules={[Pagination]}
+        modules={[Pagination, Navigation]}
         spaceBetween={40}
         autoplay={true}
         slidesPerView={slideNum}
-        navigation
+        navigation={true}
         scrollbar={{ draggable: true }}
         pagination={{ clickable: true }}
         className="container services__container"

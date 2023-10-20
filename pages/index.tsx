@@ -57,7 +57,6 @@ export default function Index() {
         <About />
         <Experience />
         <Services />
-        <Portfolio />
         {/* <Portfolio/> */}
         <Contact />
       </>

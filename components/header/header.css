@@ -159,3 +159,21 @@
     bottom: 200px;
   }
 }
+
+#portfolio__link {
+  color: var(--color-primary);
+  transition: var(--transition);
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-decoration: underline var(--color-primary);
+  word-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
+  cursor: pointer;
+}
+
+#portfolio__link:hover {
+  color: var(--color-white);
+  text-decoration: underline dotted var(--color-white);
+  transform: scale(1.01);
+  transition: var(--transition);
+}

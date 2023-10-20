@@ -36,15 +36,20 @@ export default function Header() {
       >
         <div className="header__logo">
           <h5 className="mt__header">Hello I'm</h5>
-          <h1 className="text-5xl lg:text-6xl font-semibold scroll-px-10">
+          <h1>
             <span>{text}</span>
-            <Cursor cursorColor="#d3af37" />
+            <Cursor cursorColor="#7C7F82" />
           </h1>
         </div>
         <h1 className="hidden">Raed Elmajdoub</h1>
         <h5 className="text-light">Fullstack JS/TS, DEVOPS</h5>
         <CTA />
-        <Animation />
+        {/* <Animation /> */}
+        <div className="animation__header__loadingscreen">
+          <a href="/portfolio" id="portfolio__link">
+            Check My Recent Projects ...
+          </a>
+        </div>
         <HeaderSocials />
 
         <a href="#contact" className="scroll__down">

@@ -10,12 +10,12 @@
 }
 
 :root {
-  --color-bg: #010b13;
-  --color-bg-variant: #80800027;
-  --color-primary: #d3af37;
+  --color-bg: #1d1d20;
+  --color-bg-variant: #2b2b2b;
+  --color-primary: #66fcf1;
   --color-primary-variant: #1b1b1b;
   --color-white: #fff;
-  --color-light: #fadadd;
+  --color-light: #7c7f82;
   --color-disabled: #6c757d;
 
   --transition: all 400ms ease;
@@ -207,4 +207,18 @@ code {
   background: var(--color-primary-variant);
   padding: 0.2rem 0.4rem;
   border-radius: 0.4rem;
+}
+
+.swiper-pagination {
+  position: relative !important;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: var(--color-primary) !important;
+}
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-size: 30px !important;
 }
