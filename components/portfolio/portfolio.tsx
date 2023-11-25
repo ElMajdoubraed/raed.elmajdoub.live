@@ -12,6 +12,9 @@ export default function Portfolio() {
         <div className="container portfolio__container">
           {map(_projects, (project: Project, index: number) => (
             <article
+              onClick={() => {
+                window.open(project.demo ? project.demo : project.github);
+              }}
               key={"Raed elmajdoub project_" + index}
               className="portfolio__item"
             >

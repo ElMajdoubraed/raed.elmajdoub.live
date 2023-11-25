@@ -1,15 +1,33 @@
 [
   {
-    "title": "Weather App",
-    "img_path": "/portfolio-images/projects/weather.png",
-    "github": "https://github.com/ElMajdoubraed/Weather-App",
-    "demo": "https://play.google.com/store/apps/details?id=com.raedelmajdoub.Weatherapp"
-  },
-  {
     "title": "Menu Folio",
     "img_path": "https://menu.elmajdoub.live/images/home/home.png",
     "github": "https://github.com/ElMajdoubraed/menu-folio",
     "demo": "https://menu.elmajdoub.live"
+  },
+  {
+    "title": "Qr Code Scanner and Generator",
+    "img_path": "/portfolio-images/projects/qr.png",
+    "github": "https://github.com/ElMajdoubraed/raed.elmajdoub.live/blob/main/pages/projects/demo/qr.tsx",
+    "demo": "https://elmajdoub.live/qr"
+  },
+  {
+    "title": "Books Store",
+    "img_path": "/portfolio-images/projects/books.png",
+    "github": "https://github.com/ElMajdoubraed/Book_store",
+    "demo": "https://kotbi.elmajdoub.live"
+  },
+  {
+    "title": "Q&A and discussion application ",
+    "img_path": "/portfolio-images/projects/q&a.jpg",
+    "github": "https://github.com/ElMajdoubraed/hsoub_cours_next.io",
+    "demo": "https://hsoub-cours-next-io.vercel.app"
+  },
+  {
+    "title": "Reservations website",
+    "img_path": "/portfolio-images/projects/hojozet.png",
+    "github": "https://github.com/ElMajdoubraed/Hojozet",
+    "demo": "https://hojozet.vercel.app"
   },
   {
     "title": "Food Recipes",
@@ -24,15 +42,8 @@
     "demo": "https://landing.elmajdoub.live"
   },
   {
-    "title": "Q&A and discussion application ",
-    "img_path": "/portfolio-images/projects/q&a.jpg",
-    "github": "https://github.com/ElMajdoubraed/hsoub_cours_next.io",
-    "demo": "https://hsoub-cours-next-io.vercel.app"
-  },
-  {
-    "title": "Qr Code Scanner and Generator",
-    "img_path": "/portfolio-images/projects/qr.png",
-    "github": "https://github.com/ElMajdoubraed/raed.elmajdoub.live/blob/main/pages/projects/demo/qr.tsx",
-    "demo": "https://elmajdoub.live/qr"
+    "title": "Weather App",
+    "img_path": "/portfolio-images/projects/weather.png",
+    "github": "https://github.com/ElMajdoubraed/Weather-App"
   }
 ]
