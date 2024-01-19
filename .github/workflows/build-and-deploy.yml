@@ -1,71 +1,84 @@
-name: Build and Deploy portfolio S3
 on:
   push:
     branches: [main]
 jobs:
-  build-and-deploy:
-    name: Build and Deploy
+  echo:
+    name: echo
     runs-on: ubuntu-latest
-    env:
-      BUCKET: www.elmajdoub.live
-      DIST: build
-      REGION: us-east-1
-      DIST_ID: E2C1JYDWOHFIA1
-
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - name: echo
+        run: echo "hello world"
+# name: Build and Deploy portfolio S3
 
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-          aws-region: ${{ env.REGION }}
+# on:
 
-      - name: Install Dependencies
-        run: |
-          node --version
-          npm ci --production --legacy-peer-deps
+#   push:
+#     branches: [main]
+# jobs:
+#   build-and-deploy:
+#     name: Build and Deploy
+#     runs-on: ubuntu-latest
+#     env:
+#       BUCKET: www.elmajdoub.live
+#       DIST: build
+#       REGION: us-east-1
+#       DIST_ID: E2C1JYDWOHFIA1
 
-      - name: Build Static Website
-        run: |
-          npm install --legacy-peer-deps
-          npm install --save-dev typescript @types/react @types/node --legacy-peer-deps
-          npm run prod
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v2
 
-      - name: Copy files to the production website with the AWS CLI
-        run: |
-          aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
+#       - name: Configure AWS Credentials
+#         uses: aws-actions/configure-aws-credentials@v1
+#         with:
+#           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#           aws-region: ${{ env.REGION }}
 
-      - name: Copy files to the production website with the AWS CLI
-        run: |
-          aws cloudfront create-invalidation \
-            --distribution-id ${{ env.DIST_ID }} \
-            --paths "/*"
+#       - name: Install Dependencies
+#         run: |
+#           node --version
+#           npm ci --production --legacy-peer-deps
 
-  #deploy-lambda-server:
-  #name: Build and Deploy lambda server
-  #runs-on: ubuntu-latest
+#       - name: Build Static Website
+#         run: |
+#           npm install --legacy-peer-deps
+#           npm install --save-dev typescript @types/react @types/node --legacy-peer-deps
+#           npm run prod
 
-  #env:
-  #REGION: us-east-1
+#       - name: Copy files to the production website with the AWS CLI
+#         run: |
+#           aws s3 sync --delete ${{ env.DIST }} s3://${{ env.BUCKET }}
 
-  #steps:
-  #- name: Checkout
-  #uses: actions/checkout@v2
+#       - name: Copy files to the production website with the AWS CLI
+#         run: |
+#           aws cloudfront create-invalidation \
+#             --distribution-id ${{ env.DIST_ID }} \
+#             --paths "/*"
 
-  #- name: Configure AWS Credentials
-  #uses: aws-actions/configure-aws-credentials@v1
-  #with:
-  #aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-  #aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
-  #aws-region: ${{ env.REGION }}
+#deploy-lambda-server:
+#name: Build and Deploy lambda server
+#runs-on: ubuntu-latest
 
-  #- name: Install Dependencies
-  #run: |
-  #cd server
-  #node --version
-  #npm install --legacy-peer-deps
-  #npm i -g serverless
-  #npm run deploy
+#env:
+#REGION: us-east-1
+
+#steps:
+#- name: Checkout
+#uses: actions/checkout@v2
+
+#- name: Configure AWS Credentials
+#uses: aws-actions/configure-aws-credentials@v1
+#with:
+#aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+#aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+#aws-region: ${{ env.REGION }}
+
+#- name: Install Dependencies
+#run: |
+#cd server
+#node --version
+#npm install --legacy-peer-deps
+#npm i -g serverless
+#npm run deploy
+
