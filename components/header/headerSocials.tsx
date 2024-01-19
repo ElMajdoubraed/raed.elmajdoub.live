@@ -1,6 +1,8 @@
 import { BsLinkedin } from "react-icons/bs";
 import { SiUpwork } from "react-icons/si";
 import { AiFillGithub } from "react-icons/ai";
+import { IoMdMail } from "react-icons/io";
+
 export default function HeaderSocials() {
   return (
     <div className="header__socials">
@@ -27,6 +29,14 @@ export default function HeaderSocials() {
         rel="noreferrer"
       >
         <SiUpwork />
+      </a>
+      <a
+        href="mailto:raed.elmajdoub@gmail.com"
+        className="header__socials__link"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <IoMdMail />
       </a>
     </div>
   );

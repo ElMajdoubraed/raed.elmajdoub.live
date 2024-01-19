@@ -1,66 +1,70 @@
 [
   {
-    "title": "Frontend Devlopment",
+    "title": "Frontend Development",
     "skills": [
-      "Html 5",
-      "Css 3",
+      "HTML5",
+      "CSS3",
       "JavaScript",
       "TypeScript",
-      "ReactJs",
+      "React.js",
       "Angular",
       "Bootstrap",
       "Material UI",
-      "Next UI",
-      "Ejs",
-      "Sass"
+      "Next.js",
+      "EJS",
+      "Sass",
+      "Tailwind CSS"
     ]
   },
   {
-    "title": "Backend Development and databases",
+    "title": "Backend Development and Databases",
     "skills": [
-      "Rest API",
-      "NodeJs",
-      "NextJs",
-      "ExpressJs",
-      "Sql",
-      "Mongodb",
+      "REST API",
+      "Node.js",
+      "Next.js",
+      "Express.js",
+      "SQL",
+      "Sequelize",
+      "MongoDB",
       "Prisma",
       "Firebase",
       "Redis",
-      "DynamoDb"
+      "DynamoDB",
+      "GraphQL"
     ]
   },
   {
-    "title": "Infrastructure and deployment",
+    "title": "Infrastructure and Deployment",
     "skills": [
       "EC2",
       "S3",
-      "Aws lambda",
+      "AWS Lambda",
       "Ubuntu",
       "Nginx",
       "CloudFront",
       "Route53",
       "PM2",
       "AWS",
-      "Github actions",
+      "GitHub Actions",
       "Vercel",
-      "Gitlab CI/CD"
+      "GitLab CI/CD"
     ]
   },
   {
     "title": "Tools and Technologies",
     "skills": [
       "Git",
-      "Github",
+      "GitHub",
       "Socket.io",
-      "Npm",
+      "npm",
       "Yarn",
-      "Json",
+      "JSON",
       "Jest",
       "Mocha",
       "Chai",
       "Docker",
-      "Docker-compose"
+      "Docker Compose",
+      "Apollo"
     ]
   }
 ]

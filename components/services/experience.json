@@ -1,87 +1,118 @@
 [
   {
-    "title": "Events project",
-    "description": "L-mobile Intership",
+    "title": "Events Project",
+    "description": "L-mobile Internship",
     "tasks": [
-      "Ui : Ejs",
-      "Responsive design with bootstrap",
-      "Dynamic dashboards with nodeJs and expressJs",
-      "MongoDb",
-      "Authentication using PassportJs, Bcrypt",
-      "Express middlewares",
-      "Other tools : git, github"
+      "UI: EJS",
+      "Responsive Design: Bootstrap",
+      "Dynamic Dashboards: Node.js and Express.js",
+      "Database: MongoDB",
+      "Authentication: Passport.js, Bcrypt",
+      "Express Middlewares",
+      "Tools: Git, GitHub"
     ]
   },
   {
     "title": "Leadshook",
-    "description": "Leadshook freelance",
+    "description": "Leadshook Freelance",
     "tasks": [
-      "Ui : Angular, Ejs",
-      "Design : scss, bootstrap",
-      "Api : nodeJs and expressJs",
-      "JavaScript libraries : Moment.js, Lodash, jQuery",
-      "Charts : chartJs",
-      "Sql (sequelize), Redis",
-      "Issue trackers : Sentry",
-      "Lambda AWS",
-      "PassportJs, Jwt, Bcrypt",
-      "Docker, docker-compose",
-      "Web server : Nginx",
-      "Deploy : AWS",
-      "CI/CD : Gitlab CI/CD, Jenkins",
-      "Other tools : Ubuntu, Yaml, git"
+      "UI: Angular, EJS",
+      "Design: SCSS, Bootstrap",
+      "API: Node.js and Express.js",
+      "JavaScript Libraries: Moment.js, Lodash, jQuery",
+      "Charts: Chart.js",
+      "Database: SQL (Sequelize), Redis",
+      "Issue Trackers: Sentry",
+      "AWS Lambda",
+      "Authentication: Passport.js, JWT, Bcrypt",
+      "Deployment: AWS",
+      "CI/CD: GitLab CI/CD, Jenkins",
+      "Tools: Ubuntu, YAML, Git"
     ]
   },
   {
-    "title": "Leadshook V2 using typescript",
-    "description": "Leadshook freelance",
+    "title": "Leadshook V2 using TypeScript",
+    "description": "Leadshook Freelance",
     "tasks": [
-      "Ui : Angular14",
-      "Design : ngPrime",
-      "Api : NodeJs and Express (TS)",
+      "UI: Angular 14",
+      "Design: ngPrime",
+      "API: Node.js and Express (TS)",
       "Swagger",
-      "Jest for testing",
-      "Joi validation",
-      "Database : Sql (sequelize), Redis, MongoDb",
+      "Testing: Jest",
+      "Validation: Joi",
+      "Database: SQL (Sequelize), Redis, MongoDB",
       "AWS SDK",
-      "PassportJs, Jwt, Bcrypt",
-      "Docker, docker-compose",
-      "Web server : Nginx",
-      "Deploy : AWS",
-      "CI/CD : Gitlab CI/CD"
+      "Authentication: Passport.js, JWT, Bcrypt",
+      "Deployment: AWS",
+      "CI/CD: GitLab CI/CD"
     ]
   },
   {
-    "title": "Afkari",
-    "description": "Freelance Job",
+    "title": "MenuFolio",
+    "description": "Picalica Template",
     "tasks": [
-      "Ui : ReactJs",
-      "Design : BulmaCss",
-      "Api : Firebase (Databse, RealTime, Cloud)",
-      "Firebase database",
-      "Firebase Authentication",
-      "Deploy: Firebase Deploy"
+      "UI: React.js (TSX), Mui",
+      "API: Next.js (TS)",
+      "Charts: AntD",
+      "Database: MongoDB",
+      "Authentication: Passport.js, Bcrypt, Recaptcha",
+      "Deployment: Vercel",
+      "Node Mailer",
+      "QR Code Generator and Reader",
+      "Animation: Animate.css",
+      "Tools: Ubuntu, npm, Git"
+    ]
+  },
+  {
+    "title": "Book Planets",
+    "description": "Picalica Template",
+    "tasks": [
+      "UI: React.js (TSX), TailwindCSS",
+      "API: Next.js (TS)",
+      "Charts: AntD",
+      "Database: MySQL, TypeORM, Redis",
+      "Authentication: Passport.js, Google Auth, Bcrypt, Recaptcha",
+      "Deployment: Vercel",
+      "Node Mailer",
+      "Online Payment: Stripe",
+      "Animation: Animate.css, Framer Motion"
     ]
   },
   {
     "title": "Custom Projects Portal",
-    "description": "Leadshook Intership",
+    "description": "Leadshook Internship",
     "tasks": [
-      "Ui : ReactJs, Mui",
-      "Responsive design with bootstrap",
-      "Api : nodeJs and expressJs",
-      "Charts : AntD",
-      "MongoDb, Redis, DynamoDb",
-      "PassportJs, Bcrypt, and Recaptcha",
-      "Express middlewares",
-      "Docker, docker-compose",
-      "Web server : Nginx",
-      "Deploy : AWS",
+      "UI: React.js, Mui",
+      "Responsive Design: Bootstrap",
+      "API: Node.js and Express.js",
+      "Charts: AntD",
+      "Databases: MongoDB, Redis, DynamoDB",
+      "Authentication: Passport.js, Bcrypt, Recaptcha",
+      "Express Middlewares",
+      "Deployment: AWS",
       "Node Mailer",
-      "CI/CD : Gitlab CI/CD",
+      "CI/CD: GitLab CI/CD",
       "Tests: Mocha, Chai",
-      "Socket IO",
-      "Other tools : Ubuntu, Yaml"
+      "Socket.IO",
+      "Tools: Ubuntu, YAML"
+    ]
+  },
+  {
+    "title": "Portfolio Builder",
+    "description": "Freelance Project",
+    "tasks": [
+      "UI: React.js (TSX)",
+      "Web Builder: GrapesJS",
+      "API: Next.js (TS)",
+      "Charts: AntD",
+      "Databases: MongoDB, Redis",
+      "Authentication: Passport.js, Google Auth, Bcrypt, Recaptcha",
+      "Deployment: AWS",
+      "CI/CD: GitLab CI/CD",
+      "Tests: Mocha, Chai",
+      "Socket.IO",
+      "GraphQL, Apollo",
+      "Tools: Ubuntu, YAML"
     ]
   }
 ]

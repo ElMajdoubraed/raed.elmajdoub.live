@@ -103,7 +103,7 @@ export default function Contact() {
             >
               <MdOutlineEmail className="contact__option__icon" />
               <h4>Email</h4>
-              <h5>raed@elmajdoub.live</h5>
+              <h5>raed.elmajdoub@gmail.com</h5>
               <a
                 href="mailto:raed.elmajdoub@gmail.com"
                 rel="noopener"

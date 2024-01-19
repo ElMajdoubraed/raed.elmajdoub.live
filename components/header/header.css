@@ -30,6 +30,7 @@
   position: absolute;
   left: 0;
   bottom: 3rem;
+  font-size: 1.1rem;
 }
 
 .header__socials::after {
@@ -78,9 +79,20 @@
     margin-top: 7rem;
   }
 
-  .header__socials,
   .scroll__down {
     display: none;
+  }
+
+  .header__socials {
+    animation: none;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1.2rem;
+    position: relative;
+    top: 10rem;
+    font-size: x-large;
   }
 
   .mt__header {
